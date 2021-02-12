@@ -16,9 +16,9 @@ First clone this repo :
 
 ```bash
 # ssh-url
-git clone git@github.com:cra-k/cra.git
+git clone git@github.com:cra-k/cra.github.io.git
 # Or the HTTPS url
-git clone https://github.com/cra-k/cra.git
+git clone https://github.com/cra-k/cra.github.io.git
 
 cd cra
 ```
