@@ -41,7 +41,7 @@ export default function Header() {
                                 />
                                 <span className="slider round flex"></span>
                             </label>
-                            <Link href="#">
+                            <Link href="https://github.com/arcAcemK/cra-cr">
                                 <a
                                     className="app-header-github-btn"
                                     id="app-github-link"

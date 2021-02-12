@@ -25,13 +25,17 @@ function toggleTheme() {
 }
 // Immediate invocation function to set the theme on initial load
 export function enableThemes() {
+    let slider = document.querySelector("#slider");
+    if (!slider) {
+        return;
+    }
     if (localStorage.getItem("theme") === "theme-dark") {
-        document.querySelector("#slider").checked = true;
+        slider.checked = true;
         setTheme("theme-dark");
     } else {
-        document.querySelector("#slider").checked = false;
+        slider.checked = false;
         setTheme("theme-light");
     }
 
-    document.querySelector("#slider").addEventListener("change", toggleTheme);
+    slider.addEventListener("change", toggleTheme);
 }

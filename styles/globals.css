@@ -18,8 +18,6 @@
     src: url("./fonts/Chilanka-Regular.ttf");
 }
 
-/* TODO: add colors for dark themes */
-
 .theme-dark {
     /*every color in the header {*/
     --app-header-nav-bg: rgb(1, 13, 27);
@@ -161,7 +159,7 @@ body {
 }
 
 .root {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -272,8 +270,8 @@ body {
 }
 
 .app-left-side,
-.app-table-of-content,
-.app-right-side {
+.app-table-of-content/*,
+.app-right-side */ {
     position: relative;
     top: 0;
     height: 100%;
@@ -287,8 +285,8 @@ body {
     color: var(--table-of-content-color);
 }
 
-.toc-wrapper,
-.app-right-side-content-wrapper {
+.toc-wrapper/* ,
+.app-right-side-content-wrapper  */ {
     display: flex;
     position: relative;
     top: 0;
@@ -302,8 +300,8 @@ body {
     align-items: flex-start;
 }
 
-.table-of-content-title,
-.app-right-side-title {
+.table-of-content-title/* ,
+.app-right-side-title */ {
     padding: 60px 0 0 0;
     text-align: left;
     font-size: 160%;
@@ -321,13 +319,13 @@ body {
     margin-bottom: 2px;
 }
 
-.table-of-content-nav li,
-.app-right-side-nav li {
+.table-of-content-nav li/* ,
+.app-right-side-nav li */ {
     list-style-type: none;
 }
 
-.table-of-content-nav a,
-.app-right-side-nav a {
+.table-of-content-nav a/* ,
+.app-right-side-nav a  */ {
     color: var(--table-of-content-color);
     text-decoration: none;
     padding: 0;
@@ -339,7 +337,7 @@ body {
     padding-bottom: 2px;
 }
 
-:is(.table-of-content-nav li, .app-right-side-nav li) a:hover {
+:is(.table-of-content-nav li,/*  .app-right-side-nav li */) a:hover {
     padding-bottom: 5px;
 }
 
@@ -372,7 +370,7 @@ body {
     scrollbar-color: rgb(21, 29, 2) rgb(180, 153, 109);
     overflow: auto;
     border: 1px solid orangered;
-    flex-basis: 60%;
+    /* flex-basis: 60%; */
     flex-shrink: 1;
 }
 

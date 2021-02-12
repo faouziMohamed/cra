@@ -1,27 +1,44 @@
 import Head from "next/head";
 import Header from "../components/header";
-export default function Home() {
+import LeftBurgerButton from "../components/burgerBtn";
+import Layout from "../components/layout";
+import getHomePageData from "../lib/land-page";
+
+export function getStaticProps({ params }) {
+    const { pageMetadata, pageContent } = getHomePageData();
+    return {
+        props: {
+            metadata: pageMetadata,
+            data: pageContent,
+        },
+    };
+}
+export default function Home({ metadata, data }) {
     return (
         <>
             <Head>
                 <meta charSet="UTF-8" />
-                <title>Club de Recherche Académique</title>
+                <title>{metadata.title}</title>
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
-                <meta name="author" content="Faouzi Mohamed" />
-                <meta
-                    name="keywords"
-                    content="Introduction, club de recherche, ACEM, etudiant"
-                />
+                <meta name="author" content={metadata.authors} />
+                <meta name="keywords" content={metadata.keywords} />
+                <meta name="description" content={metadata.description} />
                 <meta name="color-scheme" content="dark light" />
+                <meta name="theme-color" content="#4285f4"></meta>
                 <noscript>
                     <link rel="stylesheet" href="../styles/noscript.css" />
                 </noscript>
             </Head>
-            <Header />
-            <div classnames={`root`} id="app"></div>
+            <div className="root" id="app">
+                <Header />
+                <LeftBurgerButton />
+                <Layout metadata={metadata} data={data}>
+                    OkOkOk
+                </Layout>
+            </div>
         </>
     );
 }

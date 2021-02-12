@@ -38,7 +38,7 @@ function createListLeftNav() {
         c = title.length;
     /*For H1*/
     let H1 = document.querySelector(".main-title");
-    if (!H1) {
+    if (!(H1 && ul)) {
         return;
     }
     H1.id = "top-h1";
@@ -56,8 +56,7 @@ function createListLeftNav() {
             document.querySelector(".main-title").firstChild.data
         )
     );
-    ul.parentNode.insertBefore(h2, ul);
-
+    // ul.parentNode.insertBefore(h2, ul);
     /*Main loop to create the list of title in the left side of the webpage*/
     for (let i = 0; i < c; ++i) {
         /*For H2*/
@@ -88,9 +87,10 @@ function configureBurgerMenu() {
     let burgerCheck = document.querySelector(".burger-check");
     let tableOfCOntent = document.querySelector(".app-table-of-content");
     let mainContentContainer = document.querySelector(".content-wrapper");
-    if (!burgerCheck) {
+    if (!(burgerCheck && tableOfCOntent)) {
         return;
     }
+
     // Set closed by default the table of content when screen is less than 675px
     //burgerCheck is a checkbox hidden(input)
     burgerCheck.checked = false;
@@ -102,10 +102,12 @@ function configureBurgerMenu() {
         tableOfCOntent.classList.toggle("table-of-content-closed");
     });
 
-    mainContentContainer.addEventListener("click", function closeTOC() {
-        tableOfCOntent.classList.add("table-of-content-closed");
-        burgerCheck.checked = false;
-    });
+    if (mainContentContainer) {
+        mainContentContainer.addEventListener("click", function closeTOC() {
+            tableOfCOntent.classList.add("table-of-content-closed");
+            burgerCheck.checked = false;
+        });
+    }
 }
 function appendScriptToBody(htmlDoc, fileName, isModule) {
     let doc = new DOMParser().parseFromString(htmlDoc, "text/html");
@@ -160,7 +162,7 @@ export function include(fileName, isModule = false) {
 }
 
 export function executeBody() {
-    createListLeftNav();
+    // createListLeftNav();
     handleEmptyLinks();
     configureBurgerMenu();
 }

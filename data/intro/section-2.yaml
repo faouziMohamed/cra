@@ -1,0 +1,23 @@
+---
+title: "Introduction"
+date: "2021-02-11"
+author: "Faouzi Mohamed"
+---
+## Partie 1
+Le Club de Recherche Académique (CRA) est un club fondé en 2019 par l’ACEMsection de Kénitra. Ce club a pour but premier d’apporter de l’aide dans les études aux étudiants, stagiaires et employés comorien·ne·s qui se trouvent aux Maroc.
+
+Ce qui inclue (liste non exhaustive) :
+  - de l’aide à la compréhension des cours, travaux dirigés et pratiques
+  - des formations dédiées sur certains outils [Informatique] nécessaires (voire obligatoire) à l’individu pour pouvoir mieux travailler sur ses recherches, etc.
+Le club est composé de plusieurs cellules suivant les différentes branches d'études des étudiants:
+  - Cellule de Mathématique, Informatique et Télécommunication (MIT),
+  - Cellule de Biologie
+  - Cellule de physique et chimie
+  - Droit et économie, etc.
+
+Dans le but de transparence et de partage, nous allons utiliser ce site pour archiver les rapports et compte rendus de réunion et de chaque activité réalisée.
+
+### Parasite indemn
+Les couches convolutives sont composées de filtres et de carte de caractéristiques. Son but est de repérer la présence d'un ensemble de caractéristiques dans les images reçues en entrée.
+
+Les filtres sont les "neurones" de la couche. Ils ont des poids d'entrée et produisent une valeur. La taille d'entrée est un carré fixe appelé "patch" ou "champ récepteur". Si la couche convolutionnels est une couche d'entrée, alors le patch d'entrée sera des valeurs de pixels. Si la couche est interne (cachée), alors la couche convolution prendra l'entrée d'une carte de caractéristique de la couche précédente. 
