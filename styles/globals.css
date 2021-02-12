@@ -51,15 +51,17 @@
     --aside-a-3-bt: 1px solid rgb(153, 73, 36);
 
     /* Color in navigation button (previous and next){ */
-    --app-nav-btn-text-color: #919631d2;
-    --app-footer-text-color: rgb(8, 26, 31);
-    --app-nav-btn-background-color: rgb(4, 17, 13);
+    --app-nav-btn-text-color: #aefcffd2;
+    --app-nav-btn-background-color: rgb(6, 20, 24);
     --app-nav-btn-border-color: rgb(6, 110, 110);
+    --app-nav-btn-text-color-hv: #00eeffd2;
+    --app-nav-btn-background-color-hv: rgb(1, 11, 14);
+    --app-nav-btn-icon-color-hv: #5dffa0d2;
     --app-nav-btn-boxshadow-color: rgb(0, 4, 21);
     /*End Color in navigation button (previous and next)} */
 
     /* All color in the footer { */
-
+    --app-footer-text-color: rgb(8, 26, 31);
     --app-footer-link-default-text-color: rgb(161, 12, 37);
     --app-footer-background-color: rgb(31, 46, 46);
     --app-footer-top-item-background-color: rgb(65, 156, 141);
@@ -107,14 +109,17 @@
     --aside-a-3-bg: rgba(11, 8, 19, 0.623);
     --aside-a-3-bt: 1px solid rgb(155, 97, 22);
     /* Color in navigation button (previous and next){ */
-    --app-nav-btn-text-color: #919631d2;
-    --app-footer-text-color: rgb(8, 26, 31);
-    --app-nav-btn-background-color: rgb(4, 17, 13);
+    --app-nav-btn-text-color: #a2ffe8d2;
+    --app-nav-btn-background-color: rgb(5, 31, 32);
+    --app-nav-btn-text-color-hv: #00ffbfea;
+    --app-nav-btn-background-color-hv: rgb(2, 20, 20);
+    --app-nav-btn-icon-color-hv: #cff10fd2;
     --app-nav-btn-border-color: rgb(6, 110, 110);
     --app-nav-btn-boxshadow-color: rgb(0, 4, 21);
     /*End Color in navigation button (previous and next)} */
 
     /* All color in the footer { */
+    --app-footer-text-color: rgb(8, 26, 31);
     --app-footer-link-default-text-color: rgb(161, 12, 37);
     --app-footer-background-color: rgb(31, 46, 46);
     --app-footer-top-item-background-color: rgb(148, 192, 168);
@@ -250,23 +255,24 @@ body {
 
 .app-content {
     display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
     position: relative;
-    height: 100%;
-    width: 100%;
     top: 0;
     padding-top: var(--nav-bar-height);
+    height: 100%;
+    width: 100%;
+    border: 1px solid yellow;
     z-index: var(--default-z-index);
 
     background-color: var(--main-article-bg);
     font-family: -apple-system, BlinkMacSystemFont, Ubuntu, "Segoe UI", Roboto,
         Oxygen, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     overflow: hidden;
-    align-items: stretch;
-    border: 1px solid yellow;
 }
 
 :root {
-    --app-left-right-side-flex-basis: 25%;
+    --app-left-right-side-flex-basis: 20%;
 }
 
 .app-left-side,
@@ -276,7 +282,7 @@ body {
     top: 0;
     height: 100%;
     font-size: 100%;
-    flex: var(--app-left-right-side-flex-basis);
+    flex-basis: var(--app-left-right-side-flex-basis);
     transition: transform 0.5s ease-in-out;
     z-index: var(--default-z-index);
     overflow: hidden;
@@ -370,8 +376,9 @@ body {
     scrollbar-color: rgb(21, 29, 2) rgb(180, 153, 109);
     overflow: auto;
     border: 1px solid orangered;
+    flex-basis: 100%;
     /* flex-basis: 60%; */
-    flex-shrink: 1;
+    /* flex-shrink: 1; */
 }
 
 .main-article {
@@ -447,14 +454,14 @@ body {
 
 .nav-btn-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: stretch;
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
     flex-basis: 100%;
     flex-grow: 1;
-    align-self: flex-start;
+    /* align-self: flex-start; */
     width: 100%;
 }
 .nav-btn-item {
@@ -473,7 +480,30 @@ body {
     color: var(--app-nav-btn-text-color);
     border: 1px solid var(--app-nav-btn-border-color);
     box-shadow: 1px 1px 5px var(--app-nav-btn-boxshadow-color);
-    outline: red;
+    text-decoration: none;
+}
+
+.nav-btn-item:hover {
+    background-color: var(--app-nav-btn-background-color-hv);
+    color: var(--app-nav-btn-text-color-hv);
+}
+
+.nav-btn-item:hover :is(.nav-btn-text) {
+    text-decoration: underline;
+}
+
+.nav-btn-item:hover :is(i) {
+    color: var(--app-nav-btn-icon-color-hv);
+}
+.prev-btn {
+    margin-right: auto;
+    display: flex !important;
+    flex-direction: row-reverse;
+}
+
+.next-btn {
+    margin-left: auto;
+    flex-direction: row-reverse;
 }
 
 @media screen and (max-width: 675px) {
