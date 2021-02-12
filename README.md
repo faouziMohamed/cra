@@ -1,6 +1,6 @@
 # Club Académique de recherche section de Kénitra
 
-This is the [cra-cr](https://github.com/arcAcemK/cra-cr) project being converted on [Next.js](https://nextjs.org/) using server side static generation rather than written it in plain HTML...
+This is the [cra-cr](https://github.com/cra-k/cra-cr) project being converted on [Next.js](https://nextjs.org/) using server side static generation rather than written it in plain HTML...
 
 /!\ This project is on it's start feel free to open issues or pull request  is you want to contribute.
 
@@ -16,9 +16,9 @@ First clone this repo :
 
 ```bash
 # ssh-url
-git clone git@github.com:arcAcemK/cra.git
+git clone git@github.com:cra-k/cra.git
 # Or the HTTPS url
-git clone https://github.com/arcAcemK/cra.git
+git clone https://github.com/cra-k/cra.git
 
 cd cra
 ```
