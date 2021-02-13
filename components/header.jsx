@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { craSocialLinks } from "./cra-info";
 export default function Header() {
     return (
@@ -9,13 +8,10 @@ export default function Header() {
                 <nav className="app-header-nav flex">
                     <Link href="/">
                         <a className="app-header-left-items flex">
-                            <Image
-                                priority
+                            <img
                                 src="/images/cra-icon.png"
                                 alt="CRA's logo"
                                 className="acem-icon"
-                                width="400"
-                                height="400"
                             />
                             <div className="app-nav-title flex">
                                 <span className="app-nav-title-item cra">
