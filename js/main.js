@@ -4,12 +4,8 @@ import { displayModalContent } from "./modals.js";
 
 import { executeBody } from "./body.js";
 
-void (function main() {
-    // include("modals.js", true);
+export default function main() {
     enableThemes();
     displayModalContent();
     executeBody();
-    // document.querySelector(
-    //     ".app-footer-year"
-    // ).innerText = new Date().getFullYear();
-})();
+}

@@ -42,13 +42,9 @@
     --table-of-content-bg: rgb(2, 20, 26);
     --table-of-content-color: #d4dada;
     --table-of-content-title1-hover-color: rgb(221, 255, 100);
-    --table-of-content-title2-hover-color: rgb(152, 228, 137);
-    --aside-a-1-bg: rgba(2, 2, 2, 0.658);
-    --aside-a-1-bt: 1px solid rgb(36, 153, 108);
-    --aside-a-2-bg: rgba(11, 27, 24, 0.658);
-    --aside-a-2-bt: 1px solid rgb(119, 131, 13);
-    --aside-a-3-bg: rgba(4, 23, 24, 0.658);
-    --aside-a-3-bt: 1px solid rgb(153, 73, 36);
+    --toc-h2-hover-background-color: rgba(2, 2, 2, 0.658);
+    --toc-h3-hover-background-color: rgba(11, 27, 24, 0.658);
+    --toc-h4-hover-background-color: rgba(4, 23, 24, 0.658);
 
     /* Color in navigation button (previous and next){ */
     --app-nav-btn-text-color: #aefcffd2;
@@ -101,13 +97,9 @@
     --table-of-content-bg: rgb(8, 45, 46);
     --table-of-content-color: rgb(192, 255, 247);
     --table-of-content-title1-hover-color: rgb(234, 240, 145);
-    --table-of-content-title2-hover-color: rgb(255, 166, 0);
-    --aside-a-1-bg: rgba(1, 16, 26, 0.658);
-    --aside-a-1-bt: 1px solid rgb(36, 153, 108);
-    --aside-a-2-bg: rgba(8, 17, 15, 0.658);
-    --aside-a-2-bt: 1px solid rgb(119, 131, 13);
-    --aside-a-3-bg: rgba(11, 8, 19, 0.623);
-    --aside-a-3-bt: 1px solid rgb(155, 97, 22);
+    --toc-h2-hover-background-color: rgba(1, 16, 26, 0.658);
+    --toc-h3-hover-background-color: rgba(8, 17, 15, 0.658);
+    --toc-h4-hover-background-color: rgba(11, 8, 19, 0.623);
     /* Color in navigation button (previous and next){ */
     --app-nav-btn-text-color: #a2ffe8d2;
     --app-nav-btn-background-color: rgb(5, 31, 32);
@@ -188,6 +180,7 @@ body {
     height: var(--nav-bar-height);
     background-color: var(--app-header-nav-bg);
     transition: background-color ease-out 0.8s, color ease 1.5s;
+    border-bottom: 1px solid rgba(128, 101, 14, 0.836);
 }
 
 .app-header-left-items {
@@ -262,7 +255,6 @@ body {
     padding-top: var(--nav-bar-height);
     height: 100%;
     width: 100%;
-    border: 1px solid yellow;
     z-index: var(--default-z-index);
 
     background-color: var(--main-article-bg);
@@ -272,7 +264,7 @@ body {
 }
 
 :root {
-    --app-left-right-side-flex-basis: 20%;
+    --app-left-right-side-flex-basis: 35%;
 }
 
 .app-left-side,
@@ -289,6 +281,7 @@ body {
     font-family: "Chilanka Regular"; /*Imported font*/
     background-color: var(--table-of-content-bg);
     color: var(--table-of-content-color);
+    box-shadow: 1px 0 1px 0px rgba(1, 11, 26, 0.911);
 }
 
 .toc-wrapper/* ,
@@ -299,74 +292,90 @@ body {
     height: 100%;
     flex: 100%;
     overflow-y: auto;
-    padding: 0;
     margin: 0;
+    padding: 0;
 
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
-
+.table-of-content-nav {
+    width: 100%;
+}
 .table-of-content-title/* ,
 .app-right-side-title */ {
-    padding: 60px 0 0 0;
+    padding: 60px 0 5px 12px;
     text-align: left;
     font-size: 160%;
+    border-bottom: 1px solid rgba(75, 42, 165, 0.651);
+    width: 100%;
+    box-shadow: 0 2px 2px 0px rgb(89, 131, 115);
+}
+
+.toc-page-title {
+    text-align: left;
+    font-size: 110%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toc-page-title-anchor {
+    text-decoration: none;
+    color: lightgreen;
+    padding: 9px 8px 9px 10px;
+}
+
+.toc-page-title-anchor:hover {
+    background-color: rgb(5, 59, 47);
+    border-bottom: 1px solid rgb(76, 118, 134);
+    padding-bottom: 8px;
 }
 
 .table-of-content-list {
     display: flex;
     flex-direction: column;
-    line-height: 2;
     align-items: flex-start;
+    padding: 0;
+    margin: 0;
 }
 
-.table-of-content-list > li li {
-    margin-left: -27px;
-    margin-bottom: 2px;
-}
-
-.table-of-content-nav li/* ,
-.app-right-side-nav li */ {
+.toc-li {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-self: flex-start;
+    margin-right: auto;
 }
 
-.table-of-content-nav a/* ,
+.table-of-content-link/* ,
 .app-right-side-nav a  */ {
     color: var(--table-of-content-color);
     text-decoration: none;
     padding: 0;
+    margin: 0;
+
     display: inline-block;
     text-align: left;
-    width: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 2px;
+    flex-grow: 1;
+    padding: 10px 5px 10px 7px;
+    border-bottom: 1px dashed rgb(80, 101, 102);
+    border-bottom-left-radius: 4px;
 }
 
-:is(.table-of-content-nav li,/*  .app-right-side-nav li */) a:hover {
-    padding-bottom: 5px;
-}
-
-.table-of-content-list > li > a:hover {
+.table-of-content-link:hover {
     color: var(--table-of-content-title1-hover-color);
-    background-color: var(--aside-a-1-bg);
-    border-bottom: var(--aside-a-1-bt);
+    background-color: var(--toc-h2-hover-background-color);
+    border-color: #008c96;
 }
-
-.table-of-content-list > li li > a:hover {
-    /* color: var(--table-of-content-title2-hover-color); */
-    background-color: var(--aside-a-2-bg);
-    border-bottom: var(--aside-a-2-bt);
+.toc-h3:hover {
+    background-color: var(--toc-h3-hover-background-color);
 }
-
-.table-of-content-list > li ul > li li > a:hover {
-    /* color: var(--nav-aside--li-li-hv-color); */
-    background-color: var(--aside-a-3-bg);
-    border-bottom: var(--aside-a-3-bt);
-}
-
-.table-of-content-list {
-    padding: 0 15px 3px 5px;
+.toc-h4:hover {
+    background-color: var(--toc-h4-hover-background-color);
 }
 
 /*Article styling*/
@@ -375,15 +384,11 @@ body {
     padding: var(--site-left-right-side-section-padding);
     scrollbar-color: rgb(21, 29, 2) rgb(180, 153, 109);
     overflow: auto;
-    border: 1px solid orangered;
     flex-basis: 100%;
     /* flex-basis: 60%; */
-    /* flex-shrink: 1; */
 }
 
 .main-article {
-    border: 1px solid blue;
-
     position: relative;
     color: var(--main-text-color);
     scroll-behavior: smooth;
@@ -461,7 +466,6 @@ body {
     flex-wrap: wrap;
     flex-basis: 100%;
     flex-grow: 1;
-    /* align-self: flex-start; */
     width: 100%;
 }
 .nav-btn-item {
