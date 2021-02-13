@@ -19,7 +19,7 @@ export default function BottomNavigation({ prevBtnLink, nextBtnLink }) {
     return (
         <nav className="nav-btn-wrapper flex">
             {Object.values(buttonMeta).map((button) => {
-                let mustBeHidden = button.link === "/" ? "hidden" : " ";
+                let mustBeHidden = button.link === "/#" ? "hidden" : " ";
                 let className = `${button.className} ${mustBeHidden}`;
                 className += ` nav-btn-item flex"`;
                 return (

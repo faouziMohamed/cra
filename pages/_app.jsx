@@ -5,7 +5,8 @@ import main from "../js/main";
 function App({ Component, pageProps }) {
     useEffect(() => {
         main();
-    }, []);
+    });
+
     return <Component {...pageProps} />;
 }
 
