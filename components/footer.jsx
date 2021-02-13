@@ -1,30 +1,20 @@
 import Link from "next/link";
-
-const improveLinks = {
-    githubPullRequests: "https://github.com/arcAcemK/cra-cr/pulls",
-    githubPullIssues: "https://github.com/arcAcemK/cra-cr/issues",
-};
-
-const craSocialLinks = {
-    facebook:
-        "https://www.facebook.com/Club-de-Recherche-Acad%C3%A9mique-310130176356323/",
-    github: "https://github.com/arcAcemK/",
-};
-
-const craSocial = {
-    facebook: {
-        link: craSocialLinks.facebook,
-        className: "cra-social-fb",
-        icon: "fab fa-facebook-f",
-    },
-    github: {
-        link: craSocialLinks.github,
-        className: "cra-social-github",
-        icon: "fab fa-github",
-    },
-};
+import { craSocialLinks } from "./cra-info";
 
 function UsefulLinksBloc() {
+    const craSocial = {
+        facebook: {
+            link: craSocialLinks.facebook,
+            className: "cra-social-fb",
+            icon: "fab fa-facebook-f",
+        },
+        github: {
+            link: craSocialLinks.github,
+            className: "cra-social-github",
+            icon: "fab fa-github",
+        },
+    };
+
     return (
         <section className="app-footer-useful-link app-footer-section flex">
             <h1 className="useful-link-title app-footer-section-title">
@@ -61,14 +51,14 @@ function ImproveBloc() {
             </h1>
             <p className="issues-text">
                 Reporter les erreurs du site sur
-                <Link href={improveLinks.githubPullIssues}>
+                <Link href={`${craSocialLinks.githubRepo()}/issues`}>
                     <a className="issue-github">github/issues</a>
                 </Link>
             </p>
 
             <p className="pull-request-text">
                 Pour contribuer à l'amélioration du site reportez-vous sur
-                <Link href={improveLinks.githubPullRequests}>
+                <Link href={`${craSocialLinks.githubRepo()}/pulls`}>
                     <a className="pull-request-github">github/pull request</a>
                 </Link>
             </p>

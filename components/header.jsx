@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import { craSocialLinks } from "./cra-info";
 export default function Header() {
     return (
         <>
@@ -41,7 +41,7 @@ export default function Header() {
                                 />
                                 <span className="slider round flex"></span>
                             </label>
-                            <Link href="https://github.com/arcAcemK/cra-cr">
+                            <Link href={craSocialLinks.githubRepo()}>
                                 <a
                                     className="app-header-github-btn"
                                     id="app-github-link"
