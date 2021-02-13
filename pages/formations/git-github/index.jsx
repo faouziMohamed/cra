@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Header from "../components/header";
-import LeftBurgerButton from "../components/burgerBtn";
-import Layout from "../components/layout";
-import { getHomePageData } from "../lib/posts";
+import Header from "../../../components/header";
+import LeftBurgerButton from "../../../components/burgerBtn";
+import Layout from "../../../components/layout";
+import getHomePageData from "../../../lib/land-page";
 
 export function getStaticProps({ params }) {
     const { pageMetadata, pageContent } = getHomePageData();
