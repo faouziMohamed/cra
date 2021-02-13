@@ -29,12 +29,12 @@ export function enableThemes() {
     if (!slider) {
         return;
     }
-    if (localStorage.getItem("theme") === "theme-dark") {
-        slider.checked = true;
-        setTheme("theme-dark");
-    } else {
-        slider.checked = false;
+    if (localStorage.getItem("theme") === "theme-light") {
         setTheme("theme-light");
+        slider.checked = false;
+    } else {
+        setTheme("theme-dark");
+        slider.checked = true;
     }
 
     slider.addEventListener("change", toggleTheme);
