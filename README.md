@@ -16,11 +16,11 @@ First clone this repo :
 
 ```bash
 # ssh-url
-git clone git@github.com:cra-k/cra.github.io.git
+git clone git@github.com:cra-k/cra-k.github.io.git
 # Or the HTTPS url
-git clone https://github.com/cra-k/cra.github.io.git
+git clone https://github.com/cra-k/cra-k.github.io.git
 
-cd cra.github.io
+cd cra-k.github.io
 ```
 
 You'll need to install dependencies:
