@@ -13,7 +13,6 @@ class MyDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
-                    <script type="module" src="/js/main.js" async></script>
                 </body>
             </Html>
         );

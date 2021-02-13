@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 const improveLinks = {
     githubPullRequests: "https://github.com/arcAcemK/cra-cr/pulls",
     githubPullIssues: "https://github.com/arcAcemK/cra-cr/issues",

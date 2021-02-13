@@ -13,12 +13,13 @@ export function getStaticProps({ params }) {
         },
     };
 }
+
 export default function Home({ metadata, data }) {
     return (
         <>
             <Head>
-                <meta charSet="UTF-8" />
                 <title>{metadata.title}</title>
+                <meta charSet="UTF-8" />
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
@@ -27,7 +28,7 @@ export default function Home({ metadata, data }) {
                 <meta name="keywords" content={metadata.keywords} />
                 <meta name="description" content={metadata.description} />
                 <meta name="color-scheme" content="dark light" />
-                <meta name="theme-color" content="#4285f4"></meta>
+                <meta name="theme-color" content="#4285f4" />
                 <noscript>
                     <link rel="stylesheet" href="../styles/noscript.css" />
                 </noscript>
@@ -35,9 +36,7 @@ export default function Home({ metadata, data }) {
             <div className="root" id="app">
                 <Header />
                 <LeftBurgerButton />
-                <Layout metadata={metadata} data={data}>
-                    OkOkOk
-                </Layout>
+                <Layout metadata={metadata} data={data} />
             </div>
         </>
     );
