@@ -17,7 +17,7 @@ export function getStaticProps({ params }) {
     };
 }
 
-export default function Home({ metadata, data, navigation }) {
+export default function GitGitHub({ metadata, data, navigation }) {
     return (
         <>
             <div className="root" id="app">
