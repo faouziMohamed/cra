@@ -503,8 +503,6 @@ body {
 }
 .prev-btn {
     margin-right: auto;
-    display: flex;
-    flex-direction: row-reverse;
 }
 
 .next-btn {
