@@ -1,7 +1,7 @@
 <p align="center">
   <img src="public/images/cra-icon-dark.png" alt="cra icon" width="300" height="300"/>
 </p>
-<h1 align="center">Club de recherche Académique - section de Kénitra</h1>
+<h1 align="center">Club de recherches Académiques - section de Kénitra</h1>
 
 :parasol_on_ground: Live Version https://cra-acem.tech/
 
