@@ -1,11 +1,16 @@
-# Club Académique de recherche section de Kénitra
+<p align="center">
+  <img src="public/images/cra-icon-dark.png" alt="cra icon" width="300" height="300"/>
+</p>
+<h1 align="center">Club Académique de recherche section de Kénitra</h1>
 
-> To contribute to the project please refer to [this fork](https://github.com/faouziMohamed/cra).
+:parasol_on_ground: Live Version https://cra-acem.tech/
+
+> :bulb: To contribute to the project please refer to [this fork](https://github.com/faouziMohamed/cra).
 > Since we have only 14 days (for organization) to host website on vercel. All tests, pull request and issues must be addressed to [faouziMohamed/cra](https://github.com/faouziMohamed/cra), then the working code will be tested on vercel and merged in this repo.
 
 This is the [cra-cr](https://github.com/cra-k/cra-cr) project being converted on [Next.js](https://nextjs.org/) using server side static generation rather than written it in plain HTML...
 
-/!\ This project is on it's start feel free to open issues or pull request is you want to contribute.
+:warning: This project is on it's start feel free to open issues or pull request is you want to contribute.
 
 <!--### Web Page Article
 
