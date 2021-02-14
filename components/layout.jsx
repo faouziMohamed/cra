@@ -43,6 +43,13 @@ export default function Layout({ metadata, data, navigation }) {
                 <meta name="description" content={metadata.description} />
                 <meta name="color-scheme" content="dark light" />
                 <meta name="theme-color" content="#4285f4" />
+
+                <link
+                    rel="icon"
+                    type="image/x-icon"
+                    href="/images/favicon.ico"
+                />
+
                 <noscript>
                     <link rel="stylesheet" href="/css/noscript.css" />
                 </noscript>
