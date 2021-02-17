@@ -1,12 +1,14 @@
 ---
 title: "Git et GitHub"
 pageTitle: "Git et GitHub"
-pageSubtitle: "CRA, ACEM Kénitra"
+pageSubtitle: "Faouzi Mohamed"
 authors: "Faouzi Mohamed"
 keywords: "Git, GitHub, student, etudiant"
 description: "Complète introduction sur git et github"
 date: "2021-02-13"
 lastUpdate: "2021-02-14"
+prev: "/home"
+next: "/formations/bureautique"
 path: "/formations/git-github"
 ---
 
