@@ -27,8 +27,13 @@ function PageContent({ data }) {
     ));
 }
 
+import { useEffect } from "react";
+import main from "../js/main";
 export default function Layout({ metadata, data, navigation }) {
     const { pageTitle, pageSubtitle, date, lastUpdate, path } = metadata;
+    useEffect(() => {
+        main();
+    }, []);
     return (
         <>
             <Head>

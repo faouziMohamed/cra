@@ -50,14 +50,14 @@ function ImproveBloc() {
                 Améliorer cette page
             </h1>
             <p className="issues-text">
-                Reporter les erreurs du site sur
+                Reporter les erreurs du site sur{" "}
                 <Link href={`${craSocialLinks.githubRepo()}/issues`}>
                     <a className="issue-github">github/issues</a>
                 </Link>
             </p>
 
             <p className="pull-request-text">
-                Pour contribuer à l'amélioration du site reportez-vous sur
+                Pour contribuer à l'amélioration du site reportez-vous sur{" "}
                 <Link href={`${craSocialLinks.githubRepo()}/pulls`}>
                     <a className="pull-request-github">github/pull request</a>
                 </Link>
