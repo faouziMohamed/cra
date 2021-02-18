@@ -32,7 +32,7 @@ module.exports = withPlugins([
                 {
                     source: "/dw/f/git-github",
                     destination:
-                        "https://drive.google.com/file/d/1GykWDVhNLJTBcwOr0tNIWJlFQ019-9_9/view",
+                        "https://1drv.ms/p/s!Am4xVXV1LqvLrnACo-IRGQDOHx_7?e=4AVfID",
                 },
             ];
         },
