@@ -29,6 +29,11 @@ module.exports = withPlugins([
                     source: "/formation",
                     destination: "/formations/git-github",
                 },
+                {
+                    source: "/dw/f/git-github",
+                    destination:
+                        "https://drive.google.com/file/d/1GykWDVhNLJTBcwOr0tNIWJlFQ019-9_9/view",
+                },
             ];
         },
         assetPrefix: ghPages ? "/cra-k.github.io/" : "",
