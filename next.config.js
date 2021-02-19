@@ -11,7 +11,7 @@ module.exports = withPlugins([
         {
           source: "/about",
           destination: "/home",
-          permanent: false,
+          permanent: true,
         },
       ];
     },
@@ -22,12 +22,8 @@ module.exports = withPlugins([
           destination: "/",
         },
         {
-          source: "/formations",
-          destination: "/formations/git-github",
-        },
-        {
           source: "/formation",
-          destination: "/formations/git-github",
+          destination: "/formations",
         },
         {
           source: "/read-doc/f/git-github",
