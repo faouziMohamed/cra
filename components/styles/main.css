@@ -1,0 +1,20 @@
+@import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
+/*@import url("nav-mobile.css");*/
+/* @import url("body.css"); */
+@import url("objects.css");
+@import url("./globals.css");
+/*@import url("figures.css");
+@import url("modal-things.css");
+@import url("img-slide.css");*/
+
+.hidden {
+    display: none;
+}
+
+.opacity_1 {
+    opacity: 1;
+}
+
+.opacity_0 {
+    opacity: 0;
+}

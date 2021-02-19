@@ -1,0 +1,118 @@
+.main-header {
+  width: 70%;
+}
+
+.article_wraper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  flex: 1 0 100%;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.213);
+  width: 80%;
+}
+
+.download_article {
+  margin-right: 1%;
+  flex: 0 0;
+  align-self: flex-start;
+  align-items: center;
+}
+
+.download_section {
+  background-color: var(--main-section-bg);
+  padding: 15px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--main-section-border-color);
+  letter-spacing: 0.05em;
+  transition: background-color ease-in-out 0.19s;
+  box-shadow: 0 1px 4px rgb(8, 51, 56);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 2px solid rgba(65, 255, 223, 0.808);
+  box-shadow: 0 0 12px rgb(151, 161, 207);
+}
+
+.download_section:hover {
+  border: 2px solid rgba(65, 255, 223, 0.808);
+  box-shadow: 0 0 8px rgb(235, 196, 26);
+}
+.articleName {
+  margin: 0;
+  padding: 5px 8px;
+  font-size: 18px;
+  color: white;
+  background-color: rgb(218, 7, 28);
+}
+
+.download_section:hover .articleName {
+  background-color: rgb(207, 19, 6);
+}
+.download_link_container {
+  background-color: rgb(215, 255, 248);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  align-self: center;
+}
+
+.cardFigure {
+  border: 2px solid gray;
+  height: 280px;
+  width: 280px;
+  max-width: 300px;
+  margin: 0;
+  padding: 0 0 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Agency;
+  color: #001;
+  flex: 1 0;
+  align-self: stretch;
+}
+
+.cardDescription {
+  font-family: Agency;
+  font-size: 110%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.round {
+  width: 100px;
+}
+
+.titleMargin {
+  margin: 2px;
+}
+
+.cardAuthor {
+  font-family: Corben;
+  font-size: 85%;
+  margin: 2px;
+}
+
+.smallInfoStyle {
+  color: #3b3838;
+  font-size: 80%;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: #c4ffd3;
+}
