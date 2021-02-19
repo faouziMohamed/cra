@@ -83,7 +83,7 @@ function DocCard({ dLink, readLink, title, author, date, logo, titleHead }) {
                 <div className={`${css.btn_links_parent} flex`}>
                   <Link href={dLink}>
                     <a className={`${css.downloadBtn} ${css.btn_links} flex`}>
-                      <i class="fas fa-download"></i>
+                      <i className="fas fa-download"></i>
                       <span className={`${css.btn_text}`}>Télécharger</span>
                     </a>
                   </Link>
