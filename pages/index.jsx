@@ -9,7 +9,7 @@ export function getStaticProps() {
       data: pageContent,
       navigation: {
         prev: "/#",
-        next: "/formations/git-github",
+        next: "/formations",
       },
     },
   };
