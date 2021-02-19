@@ -1,30 +1,30 @@
-import Layout from "../components/layout";
+import ArticleLayout from "../components/page";
 import { getHomePageData } from "../lib/posts";
 
-export function getStaticProps({ params }) {
-    const { pageMetadata, pageContent } = getHomePageData();
-    return {
-        props: {
-            metadata: pageMetadata,
-            data: pageContent,
-            navigation: {
-                prev: "/#",
-                next: "/formations/git-github",
-            },
-        },
-    };
+export function getStaticProps() {
+  const { pageMetadata, pageContent } = getHomePageData();
+  return {
+    props: {
+      metadata: pageMetadata,
+      data: pageContent,
+      navigation: {
+        prev: "/#",
+        next: "/formations/git-github",
+      },
+    },
+  };
 }
 
 export default function Home({ metadata, data, navigation }) {
-    return (
-        <>
-            <div className="root" id="app">
-                <Layout
-                    metadata={metadata}
-                    data={data}
-                    navigation={navigation}
-                />
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className="root" id="app">
+        <ArticleLayout
+          metadata={metadata}
+          data={data}
+          navigation={navigation}
+        />
+      </div>
+    </>
+  );
 }
