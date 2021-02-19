@@ -5,13 +5,14 @@ import Layout, { IncludeIf } from "../../components/mainLayout";
 import css from "../../components/styles/download.module.css";
 export default function Download() {
   const metadata = {
-    title: "Tétéchargement",
+    title: "Téléchargement",
     authors: "cra",
     description: "Page de téléchargement",
     keywords: "Download, téléchargement",
     pageTitle: "Téléchargement",
     pageSubtitle: "Tous les téléchargements",
     path: "/download",
+    ogImg: "/images/dwIcons/acem-logo-white.svg",
   };
   return (
     <>
