@@ -19,7 +19,7 @@
 
 This is the [cra-cr](https://github.com/cra-k/cra-cr) project being converted on [Next.js](https://nextjs.org/) using server side static generation rather than written it in plain HTML...
 
-:warning: This project is on it's start feel free to open issues or pull request is you want to contribute.
+:warning: This project is on it's start feel free to open issues or pull request if you want to contribute.
 
 <!--### Web Page Article
 
