@@ -5,16 +5,18 @@ import Footer from "./footer";
 import TableOfContent from "./tableOfContent";
 import LeftBurgerButton from "./burgerBtn";
 import Header from "./header";
+import { useEffect, useState } from "react";
 export function IncludeIf({ condition, children }) {
   return condition && <>{children}</>;
 }
 
 export default function Layout({ article, children, metadata, navigation }) {
   const { pageTitle, pageSubtitle, path } = metadata;
-  metadata.ogImg ||
-    (metadata.ogImg = "/images/poster/gitgithub/acem-logo-white.svg");
+  metadata.ogImg || (metadata.ogImg = "/images/dwIcons/acem-logo-white.svg");
   const COMPLETE_URL = `https://cra-acem.tech${path}`;
   const isTrue = article !== undefined;
+  let [title, setTitle] = useState(metadata.title);
+
   return (
     <>
       <Head>
@@ -36,13 +38,12 @@ export default function Layout({ article, children, metadata, navigation }) {
         <noscript>
           <link rel="stylesheet" href="/css/noscript.css" />
         </noscript>
+        {/* {setTitle(metadata.title)} */}
       </Head>
-
       <Header />
       <IncludeIf condition={isTrue}>
         <LeftBurgerButton />
       </IncludeIf>
-
       <main className="app-content main-content flex">
         <IncludeIf condition={isTrue}>
           <TableOfContent />
@@ -62,6 +63,15 @@ export default function Layout({ article, children, metadata, navigation }) {
           </article>
         </div>
       </main>
+      <a href="#top" className="to-top"></a>
+      <noscript>
+        <div className="noscript-layout">
+          <p className="no-script-text">
+            <i className="fas fa-exclamation-triangle"></i>
+            <span>La page web fonctionne bien avec javascript activé</span>
+          </p>
+        </div>
+      </noscript>
     </>
   );
 }
