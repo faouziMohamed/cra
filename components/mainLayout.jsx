@@ -15,8 +15,11 @@ export default function Layout({ article, children, metadata, navigation }) {
   metadata.ogImg || (metadata.ogImg = "/images/dwIcons/acem-logo-white.svg");
   const COMPLETE_URL = `https://cra-acem.tech${path}`;
   const isTrue = article !== undefined;
-  let [title, setTitle] = useState(metadata.title);
-
+  useEffect(() => {
+    /* window.FontAwesomeConfig = {
+      searchPseudoElements: true,
+    }; */
+  });
   return (
     <>
       <Head>
