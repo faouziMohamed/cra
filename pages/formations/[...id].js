@@ -1,5 +1,6 @@
 import ArticleLayout from "../../components/page";
 import getPageData, { getAllPageIds } from "../../lib/posts";
+
 const dataTopParent = "formations";
 const PREFIX = `data/${dataTopParent}`;
 
@@ -15,11 +16,11 @@ export function getStaticPaths() {
 export function getStaticProps({ params }) {
   const pathToContent = params.id.join("/");
   const { pageMetadata, pageContent } = getPageData(
-    `${PREFIX}/${pathToContent}`
+    `${PREFIX}/${pathToContent}`,
   );
-  console.log("------------------------------------");
-  console.log(pageMetadata, params);
-  console.log("------------------------------------");
+  // console.log("------------------------------------");
+  // console.log(pageMetadata, params);
+  // console.log("------------------------------------");
   return {
     props: {
       metadata: pageMetadata,

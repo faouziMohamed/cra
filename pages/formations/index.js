@@ -1,10 +1,11 @@
 import Head from "next/head";
 import Link from "next/link";
-import Layout, { IncludeIf } from "../../components/mainLayout";
-import enableThemes from "../../js/themes";
-
-import css from "../../components/styles/formations.module.css";
 import { useEffect } from "react";
+
+import Layout, { IncludeIf } from "../../components/mainLayout";
+import css from "../../components/styles/formations.module.css";
+import enableThemes from "../../lib/themes";
+
 const metadata = {
   title: "Formations et Workshops | CRA",
   authors: "cra",
@@ -26,6 +27,20 @@ export default function OverView() {
     enableThemes();
   }, []);
 
+  // const cardData = {
+  //   0: {
+  //     readLink: '/read-doc/f/git-github',
+  //     dLink: '/dowload-doc/f/git-github',
+  //     articleLink: '/formations/git-github',
+  //     logo: '/images/dwIcons/git-github-img.svg',
+  //     logoAltTxt: 'Git GitHub icon',
+  //     title: 'Introduction sur Git et GitHub',
+  //     titleHead: 'Git et GitHub',
+  //     authors: 'Faouzi Mohamed',
+  //     date: 'Le 21/02/2021 sur Google Meet à 16h30',
+  //     doctype: 'msdoc',
+  //   },
+  // };
   return (
     <>
       <Head>
@@ -43,7 +58,9 @@ export default function OverView() {
             titleHead={"Git et GitHub"}
             author={"Faouzi Mohamed"}
             date={"Le 21/02/2021 sur Google Meet à 16h30"}
+            doctype={metadata.doctype}
           />
+
           <DocCard
             readLink={"/read-doc/f/powerpoint"}
             dLink={"/download-doc/f/powerpoint"}
@@ -54,6 +71,8 @@ export default function OverView() {
             titleHead={"Microsoft PowerPoint"}
             author={"Faouzi Mohamed, ALi Hamidi Imam, Ambourrahmane"}
             date={"Date non définie"}
+            doctype={metadata.doctype}
+
             /* rightLogo={"/images/dwIcons/git-github-img.svg"} */
           />
         </div>
@@ -66,13 +85,15 @@ function DocCard({
   articleLink,
   dLink,
   readLink,
+  logoAltTxt,
   title,
   author,
   date,
   logo,
   titleHead,
+  doctype,
 }) {
-  const isKnownDoctype = docTypeValue[metadata.doctype] !== undefined;
+  const isKnownDoctype = docTypeValue[doctype] !== undefined;
   return (
     <>
       <article className={`${css.download_article} flex`}>
@@ -88,6 +109,7 @@ function DocCard({
               <img
                 className={`${css.round} css.noRadius`}
                 src={logo}
+                alt={logoAltTxt}
                 width="130"
               />
               <figcaption className={`${css.cardDescription} flex`}>
@@ -115,7 +137,7 @@ function DocCard({
                       <a className={`${css.openBtn} ${css.btn_links} flex`}>
                         <i className="fab fa-readme"></i>
                         <span className={`${css.btn_text}`}>
-                          {docTypeValue[metadata.doctype]}
+                          {docTypeValue[doctype]}
                         </span>
                       </a>
                     </Link>
