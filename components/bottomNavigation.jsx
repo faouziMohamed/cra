@@ -1,5 +1,8 @@
 import Link from "next/link";
-export default function BottomNavigation({ navigation }) {
+
+import { IncludeIf } from "./mainLayout";
+
+export default function BottomNavigation({ navigation, isArticle }) {
   const navLinks = navigation || { prev: "/#", next: "/#" };
   const buttonMeta = {
     previous: {
@@ -18,20 +21,22 @@ export default function BottomNavigation({ navigation }) {
     },
   };
   return (
-    <nav className="nav-btn-wrapper flex">
-      {Object.values(buttonMeta).map((button) => {
-        let mustBeHidden = button.link === "/#" ? "hidden" : " ";
-        let className = `${button.className} ${mustBeHidden}`;
-        className += ` nav-btn-item flex"`;
-        return (
-          <Link href={button.link} key={button.className}>
-            <a className={className} title={button.title}>
-              <i className={button.icon} aria-hidden="true"></i>
-              <span className="nav-btn-text">{button.text}</span>
-            </a>
-          </Link>
-        );
-      })}
-    </nav>
+    <IncludeIf condition={isArticle}>
+      <nav className="nav-btn-wrapper flex">
+        {Object.values(buttonMeta).map((button) => {
+          let mustBeHidden = button.link === "/#" ? "hidden" : " ";
+          let className = `${button.className} ${mustBeHidden}`;
+          className += ` nav-btn-item flex"`;
+          return (
+            <Link href={button.link} key={button.className}>
+              <a className={className} title={button.title}>
+                <i className={button.icon} aria-hidden="true"></i>
+                <span className="nav-btn-text">{button.text}</span>
+              </a>
+            </Link>
+          );
+        })}
+      </nav>
+    </IncludeIf>
   );
 }

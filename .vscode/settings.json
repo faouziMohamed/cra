@@ -1,0 +1,6 @@
+{
+  "prettier.requireConfig": true,
+  "prettier.packageManager": "yarn",
+  "prettier.printWidth": 80,
+  "prettier.jsxBracketSameLine": true
+}

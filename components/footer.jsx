@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { craSocialLinks } from "./cra-info";
+
+import { craSocialLinks } from "../lib/utils";
 
 function UsefulLinksBloc() {
   const craSocial = {
@@ -46,13 +47,15 @@ function ImproveBloc() {
         <Link href={`${craSocialLinks.githubRepo()}/issues`}>
           <a className="issue-github">github/issues</a>
         </Link>
+        .
       </p>
 
       <p className="pull-request-text">
-        Pour contribuer à l'amélioration du site reportez-vous sur{" "}
+        Pour contribuer à l&apos;amélioration du site reportez-vous sur{" "}
         <Link href={`${craSocialLinks.githubRepo()}/pulls`}>
           <a className="pull-request-github">github/pull request</a>
         </Link>
+        .
       </p>
     </section>
   );
@@ -65,8 +68,7 @@ function CopyRightBloc() {
         CRA - ACEM Kénitra &copy;
         <span
           className="app-footer-year"
-          data-current-year={new Date().getFullYear()}
-        >
+          data-current-year={new Date().getFullYear()}>
           {new Date().getFullYear()}
         </span>
       </p>

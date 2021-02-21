@@ -1,5 +1,6 @@
 const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
+
 const ghPages = process.env.DEPLOY_TARGET === "gh-pages";
 
 module.exports = withPlugins([
