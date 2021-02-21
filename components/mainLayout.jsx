@@ -22,9 +22,11 @@ export default function Layout({ article, children, metadata, navigation }) {
             {children}
             <BottomNavigation navigation={navigation} isArticle={isArticle} />
             <Footer />
-            <a className="to-top" alt="Monter en haut de la page" href="#top">
-              {""}
-            </a>
+            <IncludeIf condition={isArticle}>
+              <a className="to-top" alt="Monter en haut de la page" href="#top">
+                {""}
+              </a>
+            </IncludeIf>
           </article>
         </div>
       </main>

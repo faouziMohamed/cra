@@ -9,7 +9,7 @@ const metadata = {
   authors: "cra",
   description: "Le direct sur l'initiation de git et github",
   keywords: "direct, formations, workshop",
-  pageTitle: "Initiation sur Git et GitHub",
+  pageTitle: "Direct : Initiation sur Git et GitHub",
   pageSubtitle: "Git et GitHub",
   path: "/direct",
   ogImg: "/images/dwIcons/acem-logo-white.svg",
@@ -39,7 +39,7 @@ export default function Direct() {
               left: 0,
               right: 0,
               width: "100vw",
-              height: "88vh",
+              height: "87vh",
               border: "0px",
             }}></iframe>
         </div>
