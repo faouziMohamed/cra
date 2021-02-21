@@ -9,10 +9,10 @@ import enableThemes from "../../lib/themes";
 const metadata = {
   title: "Formations et Workshops | CRA",
   authors: "cra",
-  description: "Pade des formations et Workshops",
+  description: "Page des formations et Workshops",
   keywords: "Download, téléchargement, article",
-  pageTitle: "Les formations du club de recherche",
-  pageSubtitle: "Tous les formations",
+  pageTitle: "Nos formations",
+  pageSubtitle: "Toutes les formations",
   path: "/formations",
   ogImg: "/images/dwIcons/acem-logo-white.svg",
   doctype: "msdoc",
