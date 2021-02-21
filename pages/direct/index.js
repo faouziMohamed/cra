@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
 import Layout, { IncludeIf } from "../../components/mainLayout";
-import enableThemes from "../../js/themes";
+import enableThemes from "../../lib/themes";
 
 import css from "../../components/styles/formations.module.css";
 import { useEffect } from "react";
@@ -45,74 +44,6 @@ export default function Direct() {
             }}></iframe>
         </div>
       </Layout>
-    </>
-  );
-}
-
-function DocCard({
-  articleLink,
-  dLink,
-  readLink,
-  title,
-  author,
-  date,
-  logo,
-  titleHead,
-}) {
-  const isKnownDoctype = docTypeValue[metadata.doctype] !== undefined;
-  return (
-    <>
-      <article className={`${css.download_article} flex`}>
-        <section className={`${css.download_section} flex`}>
-          <h1 className={css.articleName}>
-            <Link href={articleLink}>
-              <a className={css.link}>{titleHead}</a>
-            </Link>
-          </h1>
-
-          <div className={`${css.download_link_container} flex`}>
-            <figure className={`${css.cardFigure} flex`}>
-              <img
-                className={`${css.round} css.noRadius`}
-                src={logo}
-                width="130"
-              />
-              <figcaption className={`${css.cardDescription} flex`}>
-                <h2 className={`${css.titleMargin}`}>
-                  <Link href={articleLink}>
-                    <a className={`${css.link_to_article}`}>{title}</a>
-                  </Link>
-                </h2>
-
-                <h3 className={`${css.Author}`}>{author}</h3>
-                <small className={`${css.smallInfoStyle}`}>{date}</small>
-              </figcaption>
-
-              <div className={`${css.button_container}  flex`}>
-                <div className={`${css.btn_links_parent} flex`}>
-                  <Link href={dLink}>
-                    <a className={`${css.downloadBtn} ${css.btn_links} flex`}>
-                      <i className="fas fa-download"></i>
-                      <span className={`${css.btn_text}`}>Télécharger</span>
-                    </a>
-                  </Link>
-
-                  <IncludeIf condition={isKnownDoctype}>
-                    <Link href={readLink}>
-                      <a className={`${css.openBtn} ${css.btn_links} flex`}>
-                        <i className="fab fa-readme"></i>
-                        <span className={`${css.btn_text}`}>
-                          {docTypeValue[metadata.doctype]}
-                        </span>
-                      </a>
-                    </Link>
-                  </IncludeIf>
-                </div>
-              </div>
-            </figure>
-          </div>
-        </section>
-      </article>
     </>
   );
 }
