@@ -1,34 +1,54 @@
 {
-    "name": "cra-web-page",
-    "version": "0.1.0",
-    "private": true,
-    "license": "MIT",
-    "author": "Faouzi Mohamed",
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "export": "next export",
-        "deploy": "rm -rf node_modules/.cache && rm -rf out&&mkdir out && next build && touch out/.nojekyll && gh-pages -d out -t true"
-    },
-    "dependencies": {
-        "date-fns": "^2.17.0",
-        "gray-matter": "^4.0.2",
-        "imagemin-mozjpeg": "^9.0.0",
-        "imagemin-optipng": "^8.0.0",
-        "imagemin-pngquant": "^9.0.1",
-        "imagemin-svgo": "^8.0.0",
-        "next": "10.0.6",
-        "next-compose-plugins": "^2.2.1",
-        "next-optimized-images": "^2.6.2",
-        "react": "17.0.1",
-        "react-dom": "17.0.1",
-        "remark": "^13.0.0",
-        "remark-html": "^13.0.1",
-        "webp-loader": "^0.6.0"
-    },
-    "devDependencies": {
-        "gh-pages": "^3.1.0",
-        "rimraf": "^3.0.2"
+  "name": "cra-web-page",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "author": "Faouzi Mohamed",
+  "scripts": {
+    "format": "prettier  --write './**/*.{jsx,js,css,json}'",
+    "lint": "eslint ./ --ext js,jsx",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "deploy": "rm -rf node_modules/.cache && rm -rf out&&mkdir out && next build && touch out/.nojekyll && gh-pages -d out -t true"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^8.0.0",
+    "next": "10.0.6",
+    "next-compose-plugins": "^2.2.1",
+    "next-optimized-images": "^2.6.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "gh-pages": "^3.1.0",
+    "husky": "^5.0.9",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "./**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
 }
