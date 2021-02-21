@@ -10,6 +10,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prod": "next build && next start",
     "export": "next export",
     "deploy": "rm -rf node_modules/.cache && rm -rf out&&mkdir out && next build && touch out/.nojekyll && gh-pages -d out -t true"
   },
