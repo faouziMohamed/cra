@@ -34,7 +34,7 @@ export default function OverView({ metadata, pageMetadata }) {
       key: meta.id.join("/"),
       readLink: `/read-doc/f/${meta.id.slice(-1)}`,
       dLink: `/dowload-doc/f/${meta.id.slice(-1)}`,
-      articlePath: `/formations/${meta.id.slice(-1)}`,
+      articlePath: `/formations/${meta.id.join("/")}`,
       logo: meta.data.logo,
       logoAltTxt: meta.data.logoAltTxt,
       title: meta.data.title,
