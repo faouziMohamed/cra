@@ -3,6 +3,11 @@
   src: url("./fonts/Corben-08lo.ttf");
 }
 
+@font-face {
+  font-family: "Agency";
+  src: url("./fonts/Agency.TTF");
+}
+
 .article_wraper {
   display: flex;
   flex-direction: row;

@@ -18,11 +18,6 @@
   src: url("./fonts/Chilanka-Regular.ttf");
 }
 
-@font-face {
-  font-family: "Agency";
-  src: url("./fonts/Agency.TTF");
-}
-
 @import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
 
 .theme-dark {
@@ -31,7 +26,11 @@
   --github-icon-color: rgb(149, 201, 181);
   --github-icon-hover-color: rgb(210, 246, 255);
   /*}*/
-
+  --burger-wrapper-bg-color: rgb(0, 14, 22);
+  --burger-wrapper-bg-color-hover: rgb(2, 15, 19);
+  --burger-menu-bg-color: rgb(196, 111, 0);
+  --burger-menu-bg-color-hover: rgb(196, 177, 6);
+  --burger-menu-checked-bg: rgb(255, 0, 64);
   /*Color in the body{*/
 
   --main-text-color: rgb(166, 216, 208);
@@ -77,9 +76,11 @@
   --app-footer-cra-github-link-hover-color: rgb(30, 80, 95);
   --app-footer-cra-fb-link-hover-color: rgb(3, 4, 87);
   /*End All color in the footer { */
-
+  --to-top-border-color: #0a9476;
+  --to-top-symbol-color: rgb(0, 247, 255);
   /*}End colors in the body tag*/
 }
+/*Extends theme variable*/
 
 .theme-light {
   /*Every color in the header {*/
@@ -87,7 +88,11 @@
   --github-icon-color: rgb(45, 173, 146);
   --github-icon-hover-color: rgb(25, 97, 100);
   /*}*/
-
+  --burger-wrapper-bg-color: rgb(3, 21, 24);
+  --burger-wrapper-bg-color-hover: rgb(1, 13, 17);
+  --burger-menu-bg-color: rgb(145, 214, 32);
+  --burger-menu-bg-color-hover: rgb(255, 230, 0);
+  --burger-menu-checked-bg: rgb(255, 0, 64);
   /*Color in the body{*/
   --main-text-color: rgb(4, 27, 31);
   --color-link: rgb(230, 0, 0);
@@ -131,12 +136,14 @@
   --app-footer-cra-github-link-hover-color: rgb(30, 80, 95);
   --app-footer-cra-fb-link-hover-color: rgb(3, 4, 87);
   /*End All color in the footer { */
-
+  --to-top-border-color: rgb(79, 143, 140);
+  --to-top-symbol-color: #b9ecc8;
   /*}End colors in the body tag*/
 }
 
 :root {
   --app-header-pd-left-right: 15px;
+  --app-left-right-side-flex-basis: 35%;
   --nav-bar-height: 80px;
   --top-offset: 20px;
   --default-z-index: 100;
@@ -275,10 +282,6 @@ body {
   overflow: hidden;
 }
 
-:root {
-  --app-left-right-side-flex-basis: 35%;
-}
-
 .app-left-side,
 .app-table-of-content {
   position: relative;
@@ -290,7 +293,7 @@ body {
   font-size: 100%;
   color: var(--table-of-content-color);
   background-color: var(--table-of-content-bg);
-  box-shadow: 1px 0 1px 0px rgba(1, 11, 26, 0.911);
+  box-shadow: 1px 0 1px 0 rgba(1, 11, 26, 0.911);
   overflow: hidden;
   transition: transform 0.5s ease-in-out;
 }
@@ -316,7 +319,7 @@ body {
   text-align: left;
   padding: 60px 0 5px 12px;
   border-bottom: 1px solid rgba(75, 42, 165, 0.651);
-  box-shadow: 0 2px 2px 0px rgb(89, 131, 115);
+  box-shadow: 0 2px 2px 0 rgb(89, 131, 115);
 }
 
 .toc-page-title {
@@ -327,6 +330,7 @@ body {
   font-size: 110%;
   text-align: left;
 }
+
 .toc-page-title-anchor {
   text-decoration: none;
   text-align: center;
@@ -354,7 +358,6 @@ body {
   align-items: stretch;
   align-self: flex-start;
   flex-grow: 1;
-  margin-right: auto;
   list-style-type: none;
   width: 100%;
   padding: 0;
@@ -415,7 +418,7 @@ body {
 }
 
 .main-title {
-  padding: 20px 0px;
+  padding: 20px 0;
   padding-bottom: 0;
   margin: 0 var(--main-header-items-margin-right) 0 0;
   text-align: var(--main-header-items-text-alignment);
@@ -538,13 +541,14 @@ body {
   color: var(--app-nav-btn-text-color-hv);
 }
 
+.nav-btn-item:hover :is(i) {
+  color: var(--app-nav-btn-icon-color-hv);
+}
+
 .nav-btn-item:hover :is(.nav-btn-text) {
   text-decoration: underline;
 }
 
-.nav-btn-item:hover :is(i) {
-  color: var(--app-nav-btn-icon-color-hv);
-}
 .prev-btn {
   margin-right: auto;
 }
@@ -646,7 +650,7 @@ body {
   display: flex;
   justify-content: flex-start;
   text-align: left;
-  padding: 1px 0px;
+  padding: 1px 0;
   width: fit-content;
   margin: 0;
 }
@@ -680,24 +684,6 @@ body {
 }
 
 /*Objects in the web site : theme toogler, toTop button and burger button */
-/*Extends theme variable*/
-.theme-dark {
-  --border-color: #0a9476;
-  --symbol-color: rgb(0, 247, 255);
-}
-
-.theme-light {
-  --border-color: rgb(79, 143, 140);
-  --symbol-color: #b9ecc8;
-}
-
-:root {
-  --burger-wrapper-bg-color: rgb(7, 27, 23);
-  --burger-wrapper-bg-color-hover: rgb(2, 15, 19);
-  --burger-menu-bg-color: rgb(6, 196, 114);
-  --burger-menu-bg-color-hover: rgb(196, 177, 6);
-  --burger-menu-checked-bg: rgb(255, 0, 64);
-}
 .switch {
   display: flex;
   flex-wrap: wrap;
@@ -853,8 +839,8 @@ input:checked + .slider::before {
   position: fixed;
   z-index: 100;
   transition: all 0.3s ease-out;
-  border-color: var(--border-color);
-  color: var(--symbol-color);
+  border-color: var(--to-top-border-color);
+  color: var(--to-top-symbol-color);
 }
 
 .to-top::before {
@@ -872,14 +858,20 @@ input:checked + .slider::before {
   font-size: 110%;
   font-weight: bold;
   color: rgb(255, 206, 206);
-  background-color: #00000077;
-  border-color: inherit;
+  background-color: #374e129d;
   transition: transform ease-in 0.5s;
 }
 
 .to-top:hover::before {
-  transform: rotate(1990deg);
+  transform: rotate(1440deg);
   background-color: #272e1798;
+  color: rgb(0, 255, 21);
+}
+
+.to-top:active::before {
+  transform: rotate(-1440deg);
+  background-color: #ba192e98;
+  color: yellow;
 }
 /*End The to top object*/
 /*}*/
@@ -901,11 +893,6 @@ summary::marker {
   border-bottom: 1px dotted var(--main-text-color);
 }
 
-.has-tooltip:hover .tooltip {
-  opacity: 1;
-  visibility: visible;
-}
-
 .tooltip {
   position: absolute;
   left: -50%;
@@ -919,6 +906,11 @@ summary::marker {
   text-align: center;
   background-color: #aaa;
   color: #233;
+}
+
+.has-tooltip:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 .tooltip::after {
