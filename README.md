@@ -27,6 +27,8 @@ Content of the web page are stored in  YAML file. The content will be generated 
 
 ## Getting Started
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/709f95053d50453b936e6c9fc3663caf)](https://app.codacy.com/gh/faouziMohamed/cra?utm_source=github.com&utm_medium=referral&utm_content=faouziMohamed/cra&utm_campaign=Badge_Grade_Settings)
+
 To run the project locally you'll need to have [**nodeJs**](https://nodejs.org/en/download/) > 10 installed in your machine.
 
 First clone this repo :
