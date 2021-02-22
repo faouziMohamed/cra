@@ -1,4 +1,4 @@
-import ArticleLayout from "../components/page";
+import ArticleLayout from "../components/articleLayout";
 import { getHomePageData } from "../lib/posts";
 
 export function getStaticProps() {
