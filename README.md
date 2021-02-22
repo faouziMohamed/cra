@@ -1,6 +1,6 @@
 <p align="center">
   <img 
-    src="public/images/cra-icon-dark.png" 
+    src="public/images/cra-icon-white.png" 
     alt="cra icon" 
     width="300" 
     height="300" 
