@@ -1,40 +1,3 @@
-:root {
-  /*Color in the body{*/
-  --main-text-color: rgb(193, 209, 206);
-  --color-link: #faa;
-
-  --main-section-h2-color: #18d6bd;
-  --main-section-h3-color: #79df93;
-  --main-section-h4-color: #d1e49e;
-  --main-section-border-color: #081a27;
-  --main-section-h2-conclusion-color: rgb(0, 189, 142);
-  --table-border: #657473;
-
-  --table-of-content-bg: rgb(7, 11, 19);
-  --table-of-content-color: #d4dada;
-
-  /* Color in navigation button (previous and next){ */
-  --app-nav-btn-text-color: #919631d2;
-  --app-footer-text-color: rgb(8, 26, 31);
-  --app-nav-btn-background-color: rgb(4, 17, 13);
-  --app-nav-btn-border-color: rgb(6, 110, 110);
-  --app-nav-btn-boxshadow-color: rgb(0, 4, 21);
-  /*End Color in navigation button (previous and next)} */
-
-  /* All color in the footer { */
-  --app-footer-link-default-text-color: rgb(161, 12, 37);
-  --app-footer-background-color: rgb(31, 46, 46);
-  --app-footer-section-title-color: rgb(12, 38, 44);
-  --app-cra-social-link-default-color: rgb(13, 63, 128);
-  --app-footer-cra-fb-link-color: rgb(19, 45, 116);
-  --app-footer-cra-github-link-color: rgb(2, 38, 49);
-  --app-footer-cra-github-link-hover-color: rgb(30, 80, 95);
-  --app-footer-cra-fb-link-hover-color: rgb(3, 4, 87);
-  /*End All color in the footer { */
-
-  /*}End colors in the body tag*/
-}
-
 /*Modified colors*/
 :root {
   --noscript-layout-height: 30px;
@@ -46,19 +9,16 @@
   --github-icon-color: rgb(247, 253, 230);
   --github-icon-hover-color: rgb(255, 218, 138);
   /*}*/
-
   --main-article-bg: rgb(17, 67, 70);
   --main-title-color: rgb(236, 163, 3);
   --main-title-bg: rgb(26, 44, 59);
   --main-section-bg: rgb(11, 29, 39);
-
   /*Burger object */
   --burger-wrapper-bg-color: rgb(57, 94, 86);
   --burger-wrapper-bg-color-hover: rgb(2, 77, 100);
   --burger-menu-bg-color: rgb(6, 142, 196);
   --burger-menu-bg-color-hover: rgb(196, 66, 6);
   --burger-menu-checked-bg: rgb(224, 18, 180);
-
   --app-footer-top-item-background-color: rgb(86, 153, 144);
   --app-footer-section-title-border-bottom-color: rgb(135, 209, 191);
 }
