@@ -1,7 +1,7 @@
 ---
 title: "Git et GitHub"
 pageTitle: "Git et GitHub"
-pageSubtitle: "Faouzi Mohamed"
+pageSubtitle: "CRA, ACEM Kénitra"
 authors: "Faouzi Mohamed"
 keywords: "Git, GitHub, student, etudiant"
 description: "Complète introduction sur git et github"
@@ -10,6 +10,11 @@ lastUpdate: "2021-02-14"
 prev: "/home"
 next: "/formations/bureautique/powerpoint"
 path: "/formations/git-github"
-ogImg: "/images/dwIcons/acem-logo-white.svg"
+ogImg: "/images/formations/acem-logo-white.png"
+logo: "/images/formations/git-github-img.svg"
+logoAltTxt: "Icon of Git GitHub"
+formationDate: "2021-02-21"
+where: "cra-acem.tech/direct"
+doctype: "msdoc"
 ---
 

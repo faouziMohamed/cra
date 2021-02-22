@@ -1,4 +1,4 @@
-import ArticleLayout from "../../components/page";
+import ArticleLayout from "../../components/articleLayout";
 import getPageData, { getAllPageIds } from "../../lib/posts";
 
 const dataTopParent = "formations";
@@ -18,9 +18,7 @@ export function getStaticProps({ params }) {
   const { pageMetadata, pageContent } = getPageData(
     `${PREFIX}/${pathToContent}`,
   );
-  // console.log("------------------------------------");
-  // console.log(pageMetadata, params);
-  // console.log("------------------------------------");
+
   return {
     props: {
       metadata: pageMetadata,

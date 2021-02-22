@@ -1,9 +1,10 @@
 import Head from "next/head";
-import Layout, { IncludeIf } from "../../components/mainLayout";
+import { useEffect } from "react";
+
+import Layout from "../../components/mainLayout";
+import css from "../../components/styles/formations.module.css";
 import enableThemes from "../../lib/themes";
 
-import css from "../../components/styles/formations.module.css";
-import { useEffect } from "react";
 const metadata = {
   title: "Introduction sur Git et GitHub | CRA",
   authors: "cra",
@@ -37,6 +38,7 @@ export default function Direct() {
            * make the site lite
            */}
           <iframe
+            title="Meeting frame"
             allow="camera; microphone; fullscreen; display-capture"
             src="https://meet.jit.si/git-github"
             style={{

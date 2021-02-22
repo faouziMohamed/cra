@@ -33,7 +33,7 @@ export default function ArticleLayout({ metadata, data, navigation }) {
   );
 }
 
-export function PageContent({ data }) {
+function PageContent({ data }) {
   return Object.values(data).map((section) => (
     <section
       className="main-section"
