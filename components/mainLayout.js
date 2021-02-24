@@ -10,27 +10,32 @@ export default function Layout({ article, children, metadata, navigation }) {
   const isArticle = article !== undefined;
   return (
     <>
-      <HeadData metadata={metadata} />
-      <Header />
-      <LeftBurgerButton isArticle={isArticle} />
-      <main className="app-content main-content flex">
-        <TableOfContent isArticle={isArticle} />
-        <div className="content-wrapper">
-          <span id="top"></span>
-          <article className="main-article flex">
-            <PageHeader titles={metadata} />
-            {children}
-            <BottomNavigation navigation={navigation} isArticle={isArticle} />
-            <Footer />
-            <IncludeIf condition={isArticle}>
-              <a className="to-top" alt="Monter en haut de la page" href="#top">
-                {""}
-              </a>
-            </IncludeIf>
-          </article>
-        </div>
-      </main>
-      <Noscript />
+      <div className="root" id="app">
+        <HeadData metadata={metadata} />
+        <Header />
+        <LeftBurgerButton isArticle={isArticle} />
+        <main className="app-content main-content flex">
+          <TableOfContent isArticle={isArticle} />
+          <div className="content-wrapper">
+            <span id="top"></span>
+            <article className="main-article flex">
+              <PageHeader titles={metadata} />
+              {children}
+              <BottomNavigation navigation={navigation} isArticle={isArticle} />
+              <Footer />
+              <IncludeIf condition={isArticle}>
+                <a
+                  className="to-top"
+                  alt="Monter en haut de la page"
+                  href="#top">
+                  {""}
+                </a>
+              </IncludeIf>
+            </article>
+          </div>
+        </main>
+        <Noscript />
+      </div>
     </>
   );
 }
@@ -63,7 +68,7 @@ function HeadData({ metadata }) {
   );
 }
 
-function PageHeader({ titles }) {
+export function PageHeader({ titles }) {
   return (
     <header className="main-header">
       <h1 className="main-title">{titles.pageTitle}</h1>
