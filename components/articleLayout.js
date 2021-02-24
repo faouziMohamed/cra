@@ -1,3 +1,4 @@
+import parse from "html-react-parser";
 import Head from "next/head";
 import { useEffect } from "react";
 
@@ -10,16 +11,7 @@ import enableThemes from "../lib/themes";
 import Layout from "./mainLayout";
 
 export default function ArticleLayout({ metadata, data, navigation }) {
-  useEffect(() => {
-    enableThemes();
-    handleEmptyLinks();
-    configureBurgerMenu();
-  }, []);
-
-  useEffect(() => {
-    createTableOfContent();
-  });
-
+  useSideEffect();
   return (
     <>
       <Head>
@@ -33,15 +25,38 @@ export default function ArticleLayout({ metadata, data, navigation }) {
   );
 }
 
+function useSideEffect() {
+  useThemes();
+
+  useEffect(() => {
+    enableThemes();
+    handleEmptyLinks();
+    configureBurgerMenu();
+  }, []);
+
+  useEffect(() => {
+    createTableOfContent();
+    return function clearTableOfContent() {
+      document.querySelectorAll(".toc-li, .toc-page-title").forEach((node) => {
+        node.remove();
+      });
+    };
+  });
+}
+
+export function useThemes() {
+  useEffect(() => {
+    enableThemes();
+  }, []);
+}
+
 function PageContent({ data }) {
   return Object.values(data).map((section) => (
     <section
       className="main-section"
       key={section.id}
-      data-date={section.metadata.date}
-      dangerouslySetInnerHTML={{
-        __html: section.contentHTML,
-      }}
-    />
+      data-date={section.metadata.date}>
+      {parse(section.contentHTML)}
+    </section>
   ));
 }

@@ -108,7 +108,7 @@ function DocCard({ data }) {
               <div className={`${css.button_container}  flex`}>
                 <div className={`${css.btn_links_parent} flex`}>
                   <Link href={data.dLink}>
-                    <a className={`${css.downloadBtn} ${css.btn_links} flex`}>
+                    <a className={`${css.btn_links} flex`}>
                       <i className="fas fa-download"></i>
                       <span className={`${css.btn_text}`}>Télécharger</span>
                     </a>
@@ -116,7 +116,7 @@ function DocCard({ data }) {
 
                   <IncludeIf condition={isKnownDoctype}>
                     <Link href={data.readLink}>
-                      <a className={`${css.openBtn} ${css.btn_links} flex`}>
+                      <a className={`${css.btn_links} flex`}>
                         <i className="fab fa-readme"></i>
                         <span className={`${css.btn_text}`}>
                           {docTypeValue[data.doctype]}

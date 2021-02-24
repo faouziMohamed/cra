@@ -33,8 +33,6 @@ export function getStaticProps({ params }) {
 
 export default function Formations({ metadata, data, navigation }) {
   return (
-    <div className="root" id="app">
-      <ArticleLayout metadata={metadata} data={data} navigation={navigation} />
-    </div>
+    <ArticleLayout metadata={metadata} data={data} navigation={navigation} />
   );
 }

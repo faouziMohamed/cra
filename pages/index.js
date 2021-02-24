@@ -18,13 +18,7 @@ export function getStaticProps() {
 export default function Home({ metadata, data, navigation }) {
   return (
     <>
-      <div className="root" id="app">
-        <ArticleLayout
-          metadata={metadata}
-          data={data}
-          navigation={navigation}
-        />
-      </div>
+      <ArticleLayout metadata={metadata} data={data} navigation={navigation} />
     </>
   );
 }

@@ -39,8 +39,9 @@ export default function Direct() {
            */}
           <iframe
             title="Meeting frame"
+            id="direct-frame"
             allow="camera; microphone; fullscreen; display-capture"
-            src="https://meet.jit.si/git-github"
+            src="https://cra-acem.tech"
             style={{
               position: "fixed",
               top: "80px",
@@ -49,7 +50,8 @@ export default function Direct() {
               width: "100vw",
               height: "87vh",
               border: "0px",
-            }}></iframe>
+            }}
+          />
         </div>
       </Layout>
     </>
