@@ -40,7 +40,7 @@ export default function Layout({ article, children, metadata, navigation }) {
   );
 }
 
-function HeadData({ metadata }) {
+export function HeadData({ metadata }) {
   metadata.ogImg || (metadata.ogImg = "/images/dwIcons/acem-logo-white.svg");
   const { path } = metadata;
   const COMPLETE_URL = `https://cra-acem.tech${path}`;
@@ -62,7 +62,7 @@ function HeadData({ metadata }) {
       <meta property="og:locale" content="fr_FR" />
       <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
       <noscript>
-        <link rel="stylesheet" href="./style/noscript.css" />
+        <link rel="stylesheet" href="./styles/noscript.css" />
       </noscript>
     </Head>
   );
