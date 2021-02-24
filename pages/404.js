@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import { useThemes } from "../components/articleLayout";
 import Header from "../components/header";
-import { PageHeader } from "../components/mainLayout";
+import { HeadData, PageHeader } from "../components/mainLayout";
 
 const metadata = {
   title: "Page not found | CRA",
@@ -22,6 +22,7 @@ export default function NotFound() {
       <Head>
         <title>{metadata.title}</title>
       </Head>
+      <HeadData metadata={metadata} />
       <Header metadata={metadata} />
       <div className="root" id="app">
         <main
