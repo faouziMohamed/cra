@@ -1,6 +1,7 @@
 /* eslint-disable import/newline-after-import */
 import Head from "next/head";
 
+import { useThemes } from "../components/articleLayout";
 import Header from "../components/header";
 import { PageHeader } from "../components/mainLayout";
 
@@ -13,9 +14,9 @@ const metadata = {
   pageSubtitle: "Vous venez de prendre une route qui n'existe pas",
   path: "/404",
   ogImg: "/images/404.png",
-  doctype: "error",
 };
 export default function NotFound() {
+  useThemes();
   return (
     <>
       <Head>
@@ -38,7 +39,8 @@ export default function NotFound() {
               position: "relative",
             }}>
             <img
-              src={`/images/404.svg`}
+              data-theme={"switch"}
+              src={`/images/404-dark.svg`}
               width={450}
               height={350}
               style={{ width: "100%", height: "auto", maxWidth: "450px" }}
