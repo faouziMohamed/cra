@@ -4,6 +4,7 @@ import Head from "next/head";
 import { useThemes } from "../components/articleLayout";
 import Header from "../components/header";
 import { HeadData, PageHeader } from "../components/mainLayout";
+import css from "./404.module.css";
 
 const metadata = {
   title: "Page not found | CRA",
@@ -25,31 +26,16 @@ export default function NotFound() {
       <HeadData metadata={metadata} />
       <Header metadata={metadata} />
       <div className="root" id="app">
-        <main
-          className="app-content main-content flex"
-          style={{
-            height: "100%",
-            margin: "auto",
-          }}>
-          <section
-            className="main-article flex"
-            style={{
-              width: "100%",
-              height: "100%",
-              margin: "auto",
-              position: "relative",
-            }}>
+        <main className={`${css.main_wrapper} app-content main-content flex`}>
+          <section className={`${css.main_section} main-article flex `}>
             <img
               data-theme={"switch"}
+              className={`${css.tired_img_server}`}
               src={`/images/404-dark.svg`}
               width={450}
               height={350}
-              style={{ width: "100%", height: "auto", maxWidth: "450px" }}
               alt={"404 page not found"}
             />
-            {/* <div>
-              <p>{"Vous venez de prendre une route qui n'existe pas"}</p>
-            </div> */}
             <PageHeader titles={metadata} />
           </section>
         </main>

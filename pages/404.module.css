@@ -1,0 +1,26 @@
+.main_wrapper {
+  height: 100%;
+  margin: auto;
+}
+
+.main_section {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+.tired_img_server {
+  width: 100%;
+  height: auto;
+  max-width: 450px;
+}
+
+@media screen and (max-height: 614px) {
+  .main_section {
+    padding-top: 200px;
+    overflow: auto;
+  }
+  .tired_img_server {
+    width: 50%;
+  }
+}
