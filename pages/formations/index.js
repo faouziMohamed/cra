@@ -8,13 +8,6 @@ import css from "../../components/styles/formations.module.css";
 import { getAllFomationsMetadata, getPageMetadata } from "../../lib/posts";
 import enableThemes from "../../lib/themes";
 
-const docTypeValue = {
-  msdoc: "Ouvrir le document",
-  pdf: "Ouvrir le document",
-  video: "Lire la video",
-  unknown: undefined,
-};
-
 export function getStaticProps() {
   return {
     props: {
@@ -32,8 +25,17 @@ export default function OverView({ metadata, pageMetadata }) {
   const cardData = metadata.map((meta) => {
     return {
       key: meta.id.join("/"),
-      readLink: `/read-doc/f/${meta.id.slice(-1)}`,
-      dLink: `/dowload-doc/f/${meta.id.slice(-1)}`,
+      links: {
+        read: {
+          ppt: `/read-doc/f/${meta.id.slice(-1)}`,
+          word: `/read-doc/f/${meta.id.slice(-1)}`,
+          pdf: `/download-pdf/f/${meta.id.slice(-1)}`,
+          video: `/video/f/${meta.id.slice(-1)}`,
+        },
+        download: {
+          msdoc: `/dowload-doc/f/${meta.id.slice(-1)}`,
+        },
+      },
       articlePath: `/formations/${meta.id.join("/")}`,
       logo: meta.data.logo,
       logoAltTxt: meta.data.logoAltTxt,
@@ -42,7 +44,7 @@ export default function OverView({ metadata, pageMetadata }) {
       authors: meta.data.authors,
       date: meta.data.formationDate || undefined,
       where: meta.data.where || undefined,
-      doctype: meta.data.doctype,
+      doctypes: meta.data.doctypes.split(";"),
     };
   });
 
@@ -63,7 +65,13 @@ export default function OverView({ metadata, pageMetadata }) {
 }
 
 function DocCard({ data }) {
-  const isKnownDoctype = docTypeValue[data.doctype] !== undefined;
+  const docTypeValue = {
+    ppt: { text: "Slide", icon: "fas fa-file-powerpoint" },
+    word: { text: "Word", icon: "fas fa-file-word" },
+    pdf: { text: "Pdf", icon: "fas fa-file-pdf" },
+    video: { text: "Video", icon: "fas fa-video" },
+  };
+
   return (
     <>
       <article className={`${css.download_article} flex`}>
@@ -105,25 +113,30 @@ function DocCard({ data }) {
                 </small>
               </figcaption>
 
-              <div className={`${css.button_container}  flex`}>
-                <div className={`${css.btn_links_parent} flex`}>
-                  <Link href={data.dLink}>
-                    <a className={`${css.btn_links} flex`}>
-                      <i className="fas fa-download"></i>
-                      <span className={`${css.btn_text}`}>Télécharger</span>
-                    </a>
-                  </Link>
-
-                  <IncludeIf condition={isKnownDoctype}>
-                    <Link href={data.readLink}>
-                      <a className={`${css.btn_links} flex`}>
-                        <i className="fab fa-readme"></i>
-                        <span className={`${css.btn_text}`}>
-                          {docTypeValue[data.doctype]}
-                        </span>
-                      </a>
-                    </Link>
-                  </IncludeIf>
+              <div className={`${css.links_label_container}  flex`}>
+                <div className={`${css.links_label_1st_innerWrapper} flex`}>
+                  <div className={`${css.links_label_2nd_innerWrapper} flex`}>
+                    <label className={`${css.read_dw_label}`}>
+                      {"Lire/Télécharger"}
+                    </label>
+                    <div className={`${css.link_container} flex`}>
+                      {data.doctypes.map((doctype) => (
+                        <IncludeIf
+                          condition={doctype in docTypeValue}
+                          key={doctype}>
+                          <Link href={data.links.read[doctype]}>
+                            <a className={`${css.btn_links} flex`}>
+                              <i
+                                className={`${docTypeValue[doctype].icon}`}></i>
+                              <span className={`${css.btn_text}`}>
+                                {docTypeValue[doctype].text}
+                              </span>
+                            </a>
+                          </Link>
+                        </IncludeIf>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </figure>

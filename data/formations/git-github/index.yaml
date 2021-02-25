@@ -15,6 +15,6 @@ logo: "/images/formations/git-github-img.svg"
 logoAltTxt: "Icon of Git GitHub"
 formationDate: "2021-02-21"
 where: "cra-acem.tech/direct"
-doctype: "msdoc"
+doctypes: "video;pdf;ppt"
 ---
 
