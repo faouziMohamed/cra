@@ -71,21 +71,27 @@
   padding: 0;
   text-align: center;
   text-decoration: none;
-  background-color: rgb(237, 255, 252);
+  background-color: rgba(237, 255, 252, 0.644);
   background-image: linear-gradient(
     to bottom left,
-    rgb(214, 255, 224),
-    rgb(220, 213, 216)
+    rgb(125, 246, 250),
+    rgba(137, 202, 172, 0.918),
+    rgb(193, 195, 211)
   );
 }
 
 .download_section:hover .download_link_container {
   background-color: rgb(215, 250, 224);
   background-image: linear-gradient(
-    to top left,
-    rgb(233, 255, 252),
-    rgb(220, 250, 228)
+    to bottom left,
+    rgb(155, 255, 189),
+    rgb(96, 207, 183),
+    rgb(180, 252, 246)
   );
+}
+
+.formation_title {
+  width: 100%;
 }
 
 .cardFigure {
@@ -101,9 +107,24 @@
   min-width: 360px;
   margin: 0;
   padding: 0;
-  border: 1px solid rgb(179, 176, 176);
+  border: 1px solid rgba(9, 226, 233, 0.192);
   font-family: Agency;
   color: #001;
+  background-color: rgb(0, 255, 200);
+  background-image: linear-gradient(
+    rgb(0, 255, 221),
+    rgb(217, 255, 0),
+    rgb(0, 238, 255)
+  );
+}
+
+.download_section:hover .cardFigure {
+  background-color: rgb(45, 246, 253);
+  background-image: linear-gradient(
+    rgb(29, 245, 253),
+    rgb(255, 238, 0),
+    rgb(0, 255, 191)
+  );
 }
 
 .cardDescription {
@@ -112,9 +133,10 @@
   align-items: center;
   font-family: Agency;
   font-size: 110%;
+  width: 100%;
 }
 
-.round {
+.logo_img {
   width: 100px;
 }
 
@@ -133,29 +155,71 @@
   padding: 0;
   font-size: 80%;
   font-weight: normal;
-  color: #3b3838;
+  color: #312d2d;
 }
 
-.link,
-.link_to_article {
+.link {
   text-decoration: none;
+  position: relative;
   color: #c4ffd3;
+  padding-left: 11px;
 }
 
 .link_to_article {
-  color: black;
+  display: inline-flex;
+  flex-direction: row;
+  flex: 1;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(23, 24, 24);
 }
 
-.link_to_article:hover {
-  text-decoration: underline;
+:is(.link, .link_to_article):hover {
+  text-decoration: underline 2px;
+}
+
+.download_section:hover .link_to_article {
+  color: rgb(2, 17, 17);
+}
+
+:is(.link, .link_to_article)::before {
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  left: -25px;
+  top: -2px;
+  font-size: 75%;
+  font-family: "Font Awesome 5 Pro";
+  content: "\f0c1";
+  text-decoration: 0;
+  opacity: 0.7;
+  color: rgb(32, 28, 28);
+  transition: all ease-in-out 0.2s;
+}
+
+.link::before {
+  left: -5px;
+  top: 2px;
+  color: rgb(255, 0, 98);
+}
+
+:is(.link_to_article):hover::before {
+  opacity: 1;
+}
+
+.download_section:hover :is(.link_to_article):hover::before {
+  color: rgb(2, 17, 17);
+}
+
+.articleName:hover .link::before {
+  color: rgb(203, 252, 255);
+  opacity: 1;
 }
 
 .links_label_container {
   display: flex;
   width: 100%;
-  background: rgba(255, 194, 172, 0.946);
-  position: relative;
-  bottom: 0;
 }
 
 .links_label_1st_innerWrapper {
@@ -164,7 +228,6 @@
   align-items: stretch;
   flex: 1;
   padding: 2px 0px;
-  background: rgba(255, 36, 36, 0.426);
   align-self: flex-end;
 }
 
@@ -179,7 +242,7 @@
 }
 
 .read_dw_label {
-  display: bloc;
+  display: block;
   align-self: center;
   margin-bottom: -1px;
   width: 100%;
@@ -190,9 +253,9 @@
   color: rgb(1, 0, 34);
   background-image: linear-gradient(
     transparent,
-    rgba(111, 255, 164, 0.533),
-    rgba(241, 176, 114, 0.316),
-    rgba(217, 248, 39, 0.767)
+    rgba(111, 238, 255, 0.89),
+    rgba(241, 114, 192, 0.316),
+    rgba(15, 247, 208, 0.747)
   );
 }
 
@@ -210,9 +273,9 @@
   text-decoration: none;
   background-color: rgb(255, 250, 187);
   background-image: linear-gradient(
-    rgb(250, 255, 183),
-    rgb(255, 145, 0),
-    rgba(247, 255, 140, 0.912)
+    rgb(80, 168, 154),
+    rgb(0, 217, 255),
+    rgba(76, 141, 146, 0.912)
   );
 }
 .btn_text {
@@ -229,9 +292,9 @@
 :is(.btn_links):hover {
   background-color: rgb(253, 183, 30);
   background-image: linear-gradient(
-    rgb(238, 157, 7),
-    rgba(255, 123, 22, 0.878),
-    yellow
+    rgb(80, 168, 154),
+    rgb(0, 153, 255),
+    rgba(76, 141, 146, 0.912)
   );
 }
 

@@ -27,13 +27,10 @@ export default function OverView({ metadata, pageMetadata }) {
       key: meta.id.join("/"),
       links: {
         read: {
-          ppt: `/read-doc/f/${meta.id.slice(-1)}`,
-          word: `/read-doc/f/${meta.id.slice(-1)}`,
-          pdf: `/download-pdf/f/${meta.id.slice(-1)}`,
+          pdf: `/doc-pdf/f/${meta.id.slice(-1)}`,
+          ppt: `/doc-ppt/f/${meta.id.slice(-1)}`,
+          word: `/doc-word/f/${meta.id.slice(-1)}`,
           video: `/video/f/${meta.id.slice(-1)}`,
-        },
-        download: {
-          msdoc: `/dowload-doc/f/${meta.id.slice(-1)}`,
         },
       },
       articlePath: `/formations/${meta.id.join("/")}`,
@@ -85,13 +82,13 @@ function DocCard({ data }) {
           <div className={`${css.download_link_container} flex`}>
             <figure className={`${css.cardFigure} flex`}>
               <img
-                className={`${css.round}`}
+                className={`${css.logo_img}`}
                 src={data.logo}
                 alt={data.logoAltTxt}
                 width="130"
               />
               <figcaption className={`${css.cardDescription} flex`}>
-                <h2 className={`${css.titleMargin}`}>
+                <h2 className={`${css.titleMargin} ${css.formation_title}`}>
                   <Link href={data.articlePath}>
                     <a className={`${css.link_to_article}`}>{data.title}</a>
                   </Link>
