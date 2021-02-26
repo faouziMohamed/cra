@@ -18,7 +18,7 @@ module.exports = withPlugins([
       ];
     },
     async rewrites() {
-      return [...internals.links, ...externals.downloads, ...externals.read];
+      return [...internals.links, ...externals.links];
     },
     assetPrefix: ghPages ? "/cra-k.github.io/" : "",
   },
