@@ -6,7 +6,11 @@ const externals = {
     },
     {
       source: "/doc-ppt/f/powerpoint",
-      destination: "https://1drv.ms/p/s!Am4xVXV1LqvLomzt5Z_a0slnIQGj?e=2t5mOZ",
+      destination: "https://1drv.ms/p/s!Am4xVXV1LqvLrwaWzDev-iAB85LE?e=bXxDeD",
+    },
+    {
+      source: "/doc-pdf/f/powerpoint",
+      destination: "https://1drv.ms/b/s!Am4xVXV1LqvLrwiBBNdY0NVnbjbw",
     },
     {
       source: "/doc-pdf/f/git-github",
