@@ -6,11 +6,11 @@ const externals = {
     },
     {
       source: "/doc-ppt/f/powerpoint",
-      destination: "https://1drv.ms/p/s!Am4xVXV1LqvLrwYigB7G4eYcYJrA?e=hSmoQX",
+      destination: "https://onedrive.live.com/view.aspx?resid=CBAB2E757555316E!6022&ithint=file%2cpptx&authkey=!AJbMN6_6IAHzksQ",
     },
     {
       source: "/r-powerpoint",
-      destination: "/doc-ppt/f/powerpoint", 
+      destination: "https://onedrive.live.com/view.aspx?resid=CBAB2E757555316E!6022&ithint=file%2cpptx&authkey=!AJbMN6_6IAHzksQ", 
     },
       
     {
