@@ -12,7 +12,7 @@ const externals = {
       source: "/r-powerpoint",
       destination: "/doc-ppt/f/powerpoint",  https://onedrive.live.com/redir?resid=CBAB2E757555316E%216022&authkey=%21ACKAHsbh5hxgmsA&page=Download
     },
-      ,
+      
     {
       source: "/d-powerpoint",
       destination: "https://onedrive.live.com/redir?resid=CBAB2E757555316E%216022&authkey=%21ACKAHsbh5hxgmsA&page=Download",
