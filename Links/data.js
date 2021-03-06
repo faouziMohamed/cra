@@ -6,10 +6,25 @@ const externals = {
     },
     {
       source: "/doc-ppt/f/powerpoint",
-      destination: "https://1drv.ms/p/s!Am4xVXV1LqvLrwaWzDev-iAB85LE?e=bXxDeD",
+      destination: "https://1drv.ms/p/s!Am4xVXV1LqvLrwYigB7G4eYcYJrA?e=hSmoQX",
     },
     {
+      source: "/r-powerpoint",
+      destination: "/doc-ppt/f/powerpoint",  https://onedrive.live.com/redir?resid=CBAB2E757555316E%216022&authkey=%21ACKAHsbh5hxgmsA&page=Download
+    },
+      ,
+    {
+      source: "/d-powerpoint",
+      destination: "https://onedrive.live.com/redir?resid=CBAB2E757555316E%216022&authkey=%21ACKAHsbh5hxgmsA&page=Download",
+    },
+    
+    {
       source: "/doc-pdf/f/powerpoint",
+      destination: "https://1drv.ms/b/s!Am4xVXV1LqvLrwiBBNdY0NVnbjbw",
+    },
+    
+    {
+      source: "/ppt-pdf",
       destination: "https://1drv.ms/b/s!Am4xVXV1LqvLrwiBBNdY0NVnbjbw",
     },
     {
