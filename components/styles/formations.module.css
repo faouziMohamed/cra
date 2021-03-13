@@ -8,6 +8,13 @@
   src: url("./fonts/Agency.TTF");
 }
 
+.theme-light:root {
+  --article_wraper-background-color: rgba(221, 250, 239, 0.281);
+}
+.theme-dark:root {
+  --article_wraper-background-color: rgba(221, 250, 239, 0.281);
+}
+
 .article_wraper {
   display: flex;
   flex-direction: row;
@@ -16,7 +23,7 @@
   flex: 1 0 100%;
   width: 80%;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.213);
+  background-color: var(--article_wraper-background-color);
 }
 
 .download_article {
@@ -112,18 +119,18 @@
   color: #001;
   background-color: rgb(0, 255, 200);
   background-image: linear-gradient(
-    rgb(0, 255, 221),
-    rgb(217, 255, 0),
-    rgb(0, 238, 255)
+    rgb(161, 255, 242),
+    rgb(221, 255, 251),
+    rgb(223, 255, 208)
   );
 }
 
 .download_section:hover .cardFigure {
   background-color: rgb(45, 246, 253);
   background-image: linear-gradient(
-    rgb(29, 245, 253),
-    rgb(255, 238, 0),
-    rgb(0, 255, 191)
+    rgb(189, 253, 255),
+    rgb(81, 255, 174),
+    rgb(190, 255, 195)
   );
 }
 
