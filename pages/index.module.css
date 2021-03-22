@@ -70,7 +70,10 @@
 
 @media screen and (max-width: 887px) {
   .landpage_row_1 {
+    width: 100%;
     padding-left: 10px;
+    height: auto;
+    color: white;
   }
   .home_top_section {
     flex: 1;
