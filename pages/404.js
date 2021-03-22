@@ -2,8 +2,9 @@
 import Head from "next/head";
 
 import { useThemes } from "../components/articleLayout";
+import HeadData from "../components/HeadData";
 import Header from "../components/header";
-import { HeadData, PageHeader } from "../components/mainLayout";
+import PageHeader from "../components/PageHeader";
 import css from "./404.module.css";
 
 const metadata = {
@@ -16,6 +17,7 @@ const metadata = {
   path: "/404",
   ogImg: "/images/404.png",
 };
+
 export default function NotFound() {
   useThemes();
   return (

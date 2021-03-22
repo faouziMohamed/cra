@@ -1,9 +1,13 @@
-import Head from "next/head";
+import "swiper/swiper-bundle.css";
 
 import BottomNavigation from "./bottomNavigation";
 import LeftBurgerButton from "./burgerBtn";
+import Carousel from "./Carousel";
 import Footer from "./footer";
+import HeadData from "./HeadData";
 import Header from "./header";
+import Noscript from "./Noscript";
+import PageHeader from "./PageHeader";
 import TableOfContent from "./tableOfContent";
 
 export default function Layout({ article, children, metadata, navigation }) {
@@ -18,9 +22,10 @@ export default function Layout({ article, children, metadata, navigation }) {
           <TableOfContent isArticle={isArticle} />
           <div className="content-wrapper">
             <span id="top"></span>
+            <Carousel />
             <article className="main-article flex">
               <PageHeader titles={metadata} />
-              {children}
+              <PageContent>{children}</PageContent>
               <BottomNavigation navigation={navigation} isArticle={isArticle} />
               <Footer />
               <IncludeIf condition={isArticle}>
@@ -28,7 +33,7 @@ export default function Layout({ article, children, metadata, navigation }) {
                   className="to-top"
                   alt="Monter en haut de la page"
                   href="#top">
-                  {""}
+                  {/* {""} */}
                 </a>
               </IncludeIf>
             </article>
@@ -40,54 +45,8 @@ export default function Layout({ article, children, metadata, navigation }) {
   );
 }
 
-export function HeadData({ metadata }) {
-  metadata.ogImg || (metadata.ogImg = "/images/dwIcons/acem-logo-white.svg");
-  const { path } = metadata;
-  const COMPLETE_URL = `https://cra-acem.tech${path}`;
-  return (
-    <Head>
-      <meta charSet="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="author" content={metadata.authors} />
-      <meta name="keywords" content={metadata.keywords} />
-      <meta name="description" content={metadata.description} />
-      <meta name="color-scheme" content="dark light" />
-      <meta name="theme-color" content="#4285f4" />
-      <link rel="canonical" href={COMPLETE_URL} />
-      <meta property="og:url" content={COMPLETE_URL} />
-      <meta property="og:title" content={metadata.title} />
-      <meta property="og:description" content={metadata.description} />
-      <meta property="og:image" content={metadata.ogImg} />
-      <meta property="og:type" content="article" />
-      <meta property="og:locale" content="fr_FR" />
-      <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-      <noscript>
-        <link rel="stylesheet" href="./styles/noscript.css" />
-      </noscript>
-    </Head>
-  );
-}
-
-export function PageHeader({ titles }) {
-  return (
-    <header className="main-header">
-      <h1 className="main-title">{titles.pageTitle}</h1>
-      <p className="main-sub-title">{titles.pageSubtitle}</p>
-    </header>
-  );
-}
-
-function Noscript() {
-  return (
-    <noscript>
-      <div className="noscript-layout">
-        <p className="no-script-text">
-          <i className="fas fa-exclamation-triangle"></i>
-          <span>La page web fonctionne bien avec javascript activé</span>
-        </p>
-      </div>
-    </noscript>
-  );
+export function PageContent({ children }) {
+  return <>{children}</>;
 }
 
 export function IncludeIf({ condition, children }) {

@@ -42,11 +42,17 @@ function HeaderLeftItems() {
         <input type="checkbox" id="slider" className="hidden" />
         <span className="slider round flex"></span>
       </label>
-      <Link href={craSocialLinks.githubRepo()}>
+      <div className="app-header-social-container">
+        <i className="fab fa-github-square app-header-social up app-header-github-icon"></i>
+        <i className="fab fa-facebook-square app-header-social up app-header-facebook-icon"></i>
+        <i className="fab fa-whatsapp-square app-header-social up app-header-whatsapp-icon"></i>
+      </div>
+      {/* <i className="fad fa-arrow-alt-from-bottom arrow"></i> */}
+      {/* <Link href={craSocialLinks.githubRepo()}>
         <a className="app-header-github-btn" id="app-github-link">
           <i className="app-header-github-icon fab fa-github"></i>
         </a>
-      </Link>
+      </Link> */}
     </div>
   );
 }

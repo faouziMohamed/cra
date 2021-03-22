@@ -19,7 +19,7 @@ export default function ArticleLayout({ metadata, data, navigation }) {
       </Head>
 
       <Layout metadata={metadata} navigation={navigation} article>
-        <PageContent data={data} />
+        <PageContentData data={data} />
       </Layout>
     </>
   );
@@ -50,7 +50,7 @@ export function useThemes() {
   }, []);
 }
 
-function PageContent({ data }) {
+export function PageContentData({ data }) {
   return Object.values(data).map((section) => (
     <section
       className="main-section"

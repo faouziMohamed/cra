@@ -1,0 +1,117 @@
+.content_wrapper_has_carousel {
+  padding: 0;
+}
+
+.landpage_row_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background-color: rgb(0, 109, 128);
+  padding: 50px 10px 0 15px;
+  width: 100%;
+  height: 85%;
+  color: white;
+}
+
+.row_1_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.row_1_data {
+  display: flex;
+  flex-direction: column;
+  width: 42%;
+}
+
+@media screen and (max-width: 887px) {
+  .row_1_data {
+    flex: 1;
+  }
+}
+
+.main_header {
+  border-radius: 3px;
+  font-size: 100%;
+  /* background-color: var(--main-title-bg); */
+}
+
+.main_title {
+  margin: 0 var(--main-header-items-margin-right) 0 0;
+  text-align: var(--main-header-items-text-alignment);
+  font-size: 35px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--main-title-color);
+  text-shadow: 1px 0 14px rgba(0, 51, 67, 0.624);
+}
+
+.main_sub_title {
+  display: block;
+  padding: 0;
+  margin: 0 var(--main-header-items-margin-right) 0 0;
+  font-family: "Aquire bold";
+  text-align: var(--main-header-items-text-alignment);
+  color: var(--main-subtitle-color);
+  text-shadow: 1px 0 14px rgba(66, 67, 0, 0.761);
+}
+
+.home_top_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  height: 100%;
+}
+
+@media screen and (max-width: 887px) {
+  .home_top_section {
+    flex: 1;
+  }
+}
+
+.home_top_content {
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.7em;
+  text-shadow: 1px 0 40px rgba(0, 67, 53, 0.392);
+  color: rgb(255, 255, 255);
+}
+
+.home_top_links_container {
+  display: flex;
+  margin: 0;
+  font-size: 17px;
+  font-weight: bold;
+  width: fit-content;
+}
+
+.home_top_links_list {
+  background-color: red;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-basis: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home_top_link_item {
+  display: flex;
+  text-align: center;
+  padding: 0px;
+}
+
+.home_top_link {
+  padding: 10px;
+  text-decoration: none;
+  background: rgb(201, 0, 27);
+  color: white;
+  border-left: 1px solid rgb(238, 238, 238);
+  box-shadow: 2px 0px 12px rgba(255, 255, 255, 0.076);
+}
