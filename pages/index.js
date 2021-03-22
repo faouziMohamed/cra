@@ -49,7 +49,7 @@ export default function LandPage({ metadata, data, navigation }) {
             <div className={`${style.landpage_row_1} landpage_row_1`}>
               <div className={`${style.row_1_container}`}>
                 <Carousel />
-                <div className={`${style.row_1_data}`}>
+                <section className={`${style.row_1_data}`}>
                   <header className={`${style.main_header}`}>
                     <h1 className={`${style.main_title}`}>
                       {metadata.pageTitle}
@@ -63,9 +63,9 @@ export default function LandPage({ metadata, data, navigation }) {
                     {/* <PageContentData data={data} /> */}
                     <section className={`${style.home_top_section}`}>
                       <p className={`${style.home_top_content}`}>
-                        Le Club de Recherche Académique (CRA) est un club fondé
-                        en 2019 par l’ACEM section de Kénitra. Ce club a pour
-                        but premier d’apporter de l’aide dans les études aux
+                        Le Club de Recherche Académique (CRA) est fondé en 2019
+                        par l’ACEM section de Kénitra. Ce club a pour but
+                        premier d’apporter de l’aide dans les études aux
                         étudiants, stagiaires et employés comorien·ne·s qui se
                         trouvent aux Maroc.
                       </p>
@@ -89,7 +89,7 @@ export default function LandPage({ metadata, data, navigation }) {
                       </div>
                     </section>
                   </PageContent>
-                </div>
+                </section>
               </div>
             </div>
 
@@ -98,16 +98,16 @@ export default function LandPage({ metadata, data, navigation }) {
               style={{ backgroundColor: "red" }}>
               <h2>Protegez-vous contre le Covid </h2>
             </section>
-            {/* <article className="main-article flex">
+            <article className="main-article flex">
               <PageContent>
                 <PageContentData data={data} />
               </PageContent>
-              <BottomNavigation navigation={navigation} isArticle={isArticle} />
+              {/* <BottomNavigation navigation={navigation} isArticle={isArticle} /> */}
               <Footer />
               <a className="to-top" alt="Monter en haut de la page" href="#top">
                 {""}
               </a>
-            </article> */}
+            </article>
           </div>
         </main>
         <Noscript />
