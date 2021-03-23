@@ -3,20 +3,20 @@ import Swiper from "swiper/bundle";
 
 export default function Carousel() {
   const slides = [
-    { image: "/images/home_slides/cra-banner-1.jpg", width: 950, height: 520 },
-    { image: "/images/home_slides/cra-banner-2.jpg", width: 950, height: 520 },
-    { image: "/images/home_slides/formations-1.jpg", width: 950, height: 520 },
-    { image: "/images/home_slides/formations-2.png", width: 950, height: 520 },
-    { image: "/images/home_slides/formations-3.jpg", width: 950, height: 520 },
-    { image: "/images/home_slides/formations-4.jpg", width: 950, height: 520 },
-    { image: "/images/home_slides/wos-banner.jpg", width: 950, height: 520 },
-    { image: "/images/home_slides/wos-1.jpg", width: 950, height: 520 },
-    { image: "/images/home_slides/wos-2.jpg", width: 950, height: 520 },
+    { image: "/images/home_slides/cra-banner-1.jpg" },
+    { image: "/images/home_slides/cra-banner-2.jpg" },
+    { image: "/images/home_slides/formations-1.jpg" },
+    { image: "/images/home_slides/formations-2.png" },
+    { image: "/images/home_slides/formations-3.jpg" },
+    { image: "/images/home_slides/formations-4.jpg" },
+    { image: "/images/home_slides/wos-banner.jpg" },
+    { image: "/images/home_slides/wos-1.jpg" },
+    { image: "/images/home_slides/wos-2.jpg" },
   ];
   useSwipper();
   return (
     <div className={`caroussel`}>
-      <div className="swiper-container gallery-top">
+      <div className="swiper-container">
         <AddSlides slides={slides} />
         <div className="swiper-pagination"></div>
         {/* <!-- Add Arrows --> */}
@@ -32,11 +32,8 @@ function AddSlides({ slides }) {
     <div className="swiper-wrapper">
       {slides.map((slide, index) => (
         <div className="swiper-slide slide-img" key={index}>
-          {/* style={{ backgroundImage: `url(${slide.image})` }} */}
           <img
             src={slide.image}
-            // width={slide.width}
-            // height={slide.height}
             alt={`Not to be specialized`}
             className="slide-img"
           />

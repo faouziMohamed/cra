@@ -1,0 +1,46 @@
+.caroussel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  height: 100%;
+  margin: var(--app-caroussel-padding);
+  min-width: 499px;
+}
+
+.swiper-container,
+.swiper-slide,
+.slide-img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 887px) {
+  .caroussel {
+    flex: 1;
+    min-width: 478px;
+    height: auto;
+  }
+
+  .slide-img {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .caroussel {
+    display: none;
+  }
+}
+
+.swiper-button-white {
+  text-shadow: 1px 1px black;
+}
+
+.swiper-button-prev.swiper-button-white {
+  left: 0;
+}
+
+.swiper-button-next.swiper-button-white {
+  right: 0;
+}

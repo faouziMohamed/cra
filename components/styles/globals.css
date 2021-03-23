@@ -14,6 +14,12 @@
 }
 
 @font-face {
+  font-family: "Ubuntu";
+  src: url("./fonts/Ubuntu-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
   font-family: "Chilanka Regular";
   src: url("./fonts/Chilanka-Regular.ttf");
 }
@@ -497,13 +503,6 @@ body {
   padding: var(--app-content-padding);
   scrollbar-color: var(--scrollbar-color-inner) var(--scrollbar-color-outter);
   overflow: auto;
-  background-image: linear-gradient(
-      -7deg,
-      rgb(0, 10, 53) 20%,
-      rgba(11, 0, 92, 0.849) 50%,
-      rgb(4, 0, 59) 65% 75%
-    ),
-    linear-gradient(-7deg, rgb(0, 99, 104) 50% 60%);
 }
 
 .landpage_row_1 {
@@ -515,77 +514,6 @@ body {
   width: 100%;
   height: 85%;
   color: white;
-}
-
-.caroussel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 55%;
-  height: 100%;
-  margin: var(--app-caroussel-padding);
-  min-width: 499px;
-}
-
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-  height: max-content;
-}
-
-.slide-img {
-  width: 100%;
-  height: 100%;
-}
-
-@media screen and (max-width: 887px) {
-  .caroussel {
-    flex: 1;
-    min-width: 478px;
-    height: auto;
-  }
-
-  .slide-img {
-    height: 400px;
-  }
-}
-
-@media screen and (max-width: 510px) {
-  .caroussel {
-    display: none;
-  }
-}
-
-.swiper-button-white {
-  text-shadow: 1px 1px black;
-}
-
-.swiper-button-prev.swiper-button-white {
-  left: 0;
-}
-
-.swiper-button-next.swiper-button-white {
-  right: 0;
-}
-
-.gallery-top {
-  height: 100%;
-  width: 100%;
 }
 
 .main-article {
