@@ -1,5 +1,24 @@
-.content_wrapper_has_carousel {
+@font-face {
+  font-family: "Corona Covid19";
+  src: url("../components/styles/fonts/corona-covid19.ttf");
+}
+
+.home_content_wrapper {
+  position: relative;
+  flex-basis: 100%;
+  height: 100%;
+  width: 100%;
   padding: 0;
+  margin: 0;
+  overflow: auto;
+  scrollbar-color: var(--scrollbar-color-inner) var(--scrollbar-color-outter);
+  background-image: linear-gradient(
+      -7deg,
+      rgb(0, 10, 53) 20%,
+      rgba(11, 0, 92, 0.849) 50%,
+      rgb(4, 0, 59) 65% 75%
+    ),
+    linear-gradient(-7deg, rgb(0, 99, 104) 50% 60%);
 }
 
 .landpage_row_1 {
@@ -15,6 +34,12 @@
   color: white;
 }
 
+@media screen and (max-width: 510px) {
+  .landpage_row_1 {
+    min-height: auto;
+  }
+}
+
 .row_1_container {
   display: flex;
   position: relative;
@@ -23,6 +48,7 @@
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
+  flex: 1;
 }
 
 .row_1_data {
@@ -30,12 +56,6 @@
   flex-direction: column;
   width: 42%;
   height: 100%;
-}
-
-@media screen and (max-width: 887px) {
-  .row_1_data {
-    flex: 1;
-  }
 }
 
 .main_header {
@@ -55,9 +75,8 @@
 
 @media screen and (max-width: 1164px) {
   .main_title {
-    text-align: left;
-    background-color: red;
-    font-size: 190%;
+    text-align: center;
+    font-size: 170%;
   }
 }
 .main_sub_title {
@@ -81,12 +100,14 @@
 @media screen and (max-width: 887px) {
   .landpage_row_1 {
     width: 100%;
+    padding-top: 10px;
     padding-left: 10px;
     height: auto;
     color: white;
     overflow: visible;
   }
-  .home_top_section {
+  .home_top_section,
+  .row_1_data {
     flex: 1;
   }
 }
@@ -108,7 +129,6 @@
 }
 
 .home_top_links_list {
-  background-color: red;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -127,8 +147,120 @@
 .home_top_link {
   padding: 10px;
   text-decoration: none;
-  background: rgb(201, 0, 27);
+  background-color: rgb(201, 0, 27);
   color: white;
   border-left: 1px solid rgb(238, 238, 238);
   box-shadow: 2px 0px 12px rgba(255, 255, 255, 0.076);
+}
+
+.landpage_row_2 {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(235, 235, 235);
+}
+
+.landpage_row_2_content_wrapper {
+  /* padding: 10px; */
+}
+
+.covid_alerte_section {
+  margin: 0;
+  padding: 10px 30px 10px 30px;
+  background-color: rgb(118, 0, 35);
+  color: white;
+}
+.covid_alerte_title_icon {
+  font-size: 1.2em;
+}
+.covid_alerte_title {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 200%;
+  font-family: "Corona Covid19";
+  text-align: center;
+}
+
+.covid_alerte_list_item_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.covid_alerte_list_item_container_pos {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.covid_alerte_list_item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: 50%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+  font-size: 120%;
+}
+.covid_alerte_item {
+  position: relative;
+}
+.covid_alerte_item_text {
+  padding: 4px;
+}
+
+.covid_more_info_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  padding: 10px;
+  margin: 9px 0 0 0;
+  font-size: 90%;
+  text-decoration: none;
+  background-color: rgb(71, 0, 28);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(44, 0, 18, 0.685) 1%,
+      rgba(133, 1, 54, 0.453) 50%,
+      rgba(53, 0, 21, 0.76) 99%
+    ),
+    linear-gradient(
+      to left,
+      rgb(44, 0, 18) 1%,
+      rgb(133, 1, 54) 50%,
+      rgb(53, 0, 21) 99%
+    );
+  color: rgb(180, 250, 176);
+  border: 1px solid rgb(99, 1, 40);
+  transition: all ease-in-out 0.08s;
+}
+
+.covid_more_info_btn_icon {
+  margin-right: 9px;
+}
+
+.covid_more_info_btn:hover {
+  background-color: rgb(41, 0, 16);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(34, 0, 14, 0.685) 1%,
+      rgba(133, 1, 111, 0.453) 50%,
+      rgba(34, 0, 13, 0.76) 99%
+    ),
+    linear-gradient(
+      to right,
+      rgb(10, 5, 0) 1%,
+      rgb(22, 0, 1) 50%,
+      rgb(37, 20, 2) 99%
+    );
+  color: rgb(255, 255, 255);
+  transform: scale(103%);
+}
+
+.covid_more_info_btn:hover .covid_more_info_btn_text {
+  text-decoration: underline;
 }
