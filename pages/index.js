@@ -9,7 +9,8 @@ import HeadData from "../components/HeadData";
 import Header from "../components/header";
 import { PageContent } from "../components/mainLayout";
 import Noscript from "../components/Noscript";
-import { getHomePageData } from "../lib/posts";
+import TimeLine from "../components/timeline/timeline";
+import { getAllFomationsMetadata, getHomePageData } from "../lib/posts";
 import style from "./index.module.css";
 
 export function getStaticProps() {
@@ -18,6 +19,7 @@ export function getStaticProps() {
     props: {
       metadata: pageMetadata,
       data: pageContent,
+      formationsMetadata: getAllFomationsMetadata(),
       navigation: {
         prev: "/#",
         next: "/formations",
@@ -26,7 +28,7 @@ export function getStaticProps() {
   };
 }
 
-export default function LandPage({ metadata, data, navigation }) {
+export default function LandPage({ metadata, data, formationsMetadata }) {
   useThemes();
   return (
     <>
@@ -45,7 +47,11 @@ export default function LandPage({ metadata, data, navigation }) {
           <div className={`${style.home_content_wrapper} `}>
             <span id="top"></span>
             <HomePageRow1 metadata={metadata} />
-            <HomePageRow2 data={data} />
+            <HomePageRow2 />
+            <HomePageRow3 data={formationsMetadata} />
+            <HomePageRow4 data={data} />
+            {/* TODO: Add timeline for events here */}
+            {/* Events are Webinars or Formations */}
           </div>
         </main>
         <Noscript />
@@ -66,10 +72,10 @@ function HomePageRow1({ metadata }) {
           </header>
           <section className={`${style.home_top_section}`}>
             <p className={`${style.home_top_content}`}>
-              Recherche Académique (CRA) est fondé en 2019 par l’ACEM section de
-              Kénitra. Il a pour but premier d’apporter de l’aide dans les
-              études aux étudiants, stagiaires et employés comorien·ne·s qui se
-              trouvent aux Maroc.
+              Le Club de Recherche Académique (CRA) est fondé en 2019 par l’ACEM
+              section de Kénitra. Il a pour but premier d’apporter de l’aide
+              dans les études aux étudiants, stagiaires et employés
+              comorien·ne·s qui se trouvent aux Maroc.
             </p>
             <div className={`${style.home_top_links_container}`}>
               <ul className={`${style.home_top_links_list}`}>
@@ -92,23 +98,29 @@ function HomePageRow1({ metadata }) {
   );
 }
 
-function HomePageRow2({ data }) {
+function HomePageRow2() {
+  return <CovidAlerte />;
+}
+
+function HomePageRow3({ data }) {
   return (
-    <div className={`${style.landpage_row_2} landpage_row_2`}>
+    <div className={`${style.timeline_wrapper}`}>
+      <TimeLine data={data} />
+    </div>
+  );
+}
+function HomePageRow4({ data }) {
+  return (
+    <div className={`${style.landpage_row_2}`}>
       <div className={`${style.landpage_row_2_content_wrapper}`}>
-        <CovidAlerte />
         <article className="main-article flex">
-          <PageContent>
+          {/* <PageContent>
             <PageContentData data={data} />
-          </PageContent>
-          {/* <BottomNavigation navigation={navigation} isArticle={isArticle} /> */}
+          </PageContent> */}
           <Footer />
-          <article
-            className="to-top"
-            alt="Monter en haut de la page"
-            href="#top">
+          <a className="to-top" alt="Monter en haut de la page" href="#top">
             {""}
-          </article>
+          </a>
         </article>
       </div>
     </div>

@@ -39,9 +39,9 @@ export default function OverView({ metadata, pageMetadata }) {
       title: meta.data.title,
       titleHead: meta.data.pageTitle,
       authors: meta.data.authors,
-      date: meta.data.formationDate || undefined,
-      where: meta.data.where || undefined,
-      doctypes: meta.data.doctypes.split(";"),
+      date: meta.data.formationDate || false,
+      where: meta.data.where || false,
+      doctypes: (meta.data.doctypes && meta.data.doctypes.split(";")) || false,
     };
   });
 
@@ -109,37 +109,38 @@ function DocCard({ data }) {
                     : "Lieu non définie"}
                 </small>
               </figcaption>
-
-              <div className={`${css.links_label_container}  flex`}>
-                <div className={`${css.links_label_1st_innerWrapper} flex`}>
-                  <div className={`${css.links_label_2nd_innerWrapper} flex`}>
-                    <label className={`${css.read_dw_label}`}>
-                      {"Lire/Télécharger"}
-                    </label>
-                    <div className={`${css.link_container} flex`}>
-                      {data.doctypes.map((doctype) => (
-                        <IncludeIf
-                          condition={doctype in docTypeValue}
-                          key={doctype}>
-                          <Link href={data.links.read[doctype]}>
-                            <a className={`${css.btn_links} flex`}>
-                              <i
-                                className={`${docTypeValue[doctype].icon}`}></i>
-                              <span className={`${css.btn_text}`}>
-                                {docTypeValue[doctype].text}
-                              </span>
-                            </a>
-                          </Link>
-                        </IncludeIf>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <IncludeIf condition={data.doctypes}>
+                <LinkToFilesSection data={data} docTypeValue={docTypeValue} />
+              </IncludeIf>
             </figure>
           </div>
         </section>
       </article>
     </>
+  );
+}
+function LinkToFilesSection({ data, docTypeValue }) {
+  return (
+    <div className={`${css.links_label_container}  flex`}>
+      <div className={`${css.links_label_1st_innerWrapper} flex`}>
+        <div className={`${css.links_label_2nd_innerWrapper} flex`}>
+          <p className={`${css.read_dw_label}`}>Lire/Télécharger</p>
+          <div className={`${css.link_container} flex`}>
+            {data.doctypes.map((doctype) => (
+              <IncludeIf condition={doctype in docTypeValue} key={doctype}>
+                <Link href={data.links.read[doctype]}>
+                  <a className={`${css.btn_links} flex`}>
+                    <i className={`${docTypeValue[doctype].icon}`}></i>
+                    <span className={`${css.btn_text}`}>
+                      {docTypeValue[doctype].text}
+                    </span>
+                  </a>
+                </Link>
+              </IncludeIf>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
