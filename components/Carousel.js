@@ -31,7 +31,7 @@ function AddSlides({ slides }) {
   return (
     <div className="swiper-wrapper">
       {slides.map((slide, index) => (
-        <div className="swiper-slide slide-img" key={index}>
+        <div className="swiper-slide" key={index}>
           <img
             src={slide.image}
             alt={`Not to be specialized`}
@@ -45,7 +45,7 @@ function AddSlides({ slides }) {
 
 function useSwipper() {
   useEffect(() => {
-    new Swiper(".gallery-top", {
+    new Swiper(".swiper-container", {
       autoplay: {
         delay: 3500,
         disableOnInteraction: false,
