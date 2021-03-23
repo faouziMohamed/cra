@@ -4,8 +4,9 @@
 }
 
 @font-face {
-  font-family: "Aquire Bold";
+  font-family: "Aquire";
   src: url("./fonts/AquireBold-8Ma60.otf");
+  font-weight: bold;
 }
 
 @font-face {
@@ -194,6 +195,8 @@
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .flex {
