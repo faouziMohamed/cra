@@ -34,7 +34,7 @@ function AddSlides({ slides }) {
         <div className="swiper-slide" key={index}>
           <img
             src={slide.image}
-            alt={`Not to be specialized`}
+            alt={`CRA ACEM KENITRA`}
             className="slide-img"
           />
         </div>

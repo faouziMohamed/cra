@@ -105,25 +105,21 @@ function HomePageRow2() {
 function HomePageRow3({ data }) {
   return (
     <div className={`${style.timeline_wrapper}`}>
-      <TimeLine data={data} />
+      <TimeLine content={data} />
     </div>
   );
 }
 function HomePageRow4({ data }) {
   return (
-    <div className={`${style.landpage_row_2}`}>
-      <div className={`${style.landpage_row_2_content_wrapper}`}>
-        <article className="main-article flex">
-          {/* <PageContent>
+    <>
+      {/* <PageContent>
             <PageContentData data={data} />
           </PageContent> */}
-          <Footer />
-          <a className="to-top" alt="Monter en haut de la page" href="#top">
-            {""}
-          </a>
-        </article>
-      </div>
-    </div>
+      <Footer />
+      <a className="to-top" alt="Monter en haut de la page" href="#top">
+        {""}
+      </a>
+    </>
   );
 }
 

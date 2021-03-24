@@ -22,7 +22,6 @@ export default function Layout({ article, children, metadata, navigation }) {
           <TableOfContent isArticle={isArticle} />
           <div className="content-wrapper">
             <span id="top"></span>
-            <Carousel />
             <article className="main-article flex">
               <PageHeader titles={metadata} />
               <PageContent>{children}</PageContent>
