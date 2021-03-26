@@ -9,12 +9,12 @@ const externals = {
       destination: "https://onedrive.live.com/view.aspx?resid=CBAB2E757555316E!6022&ithint=file%2cpptx&authkey=!AJbMN6_6IAHzksQ",
     },
     {
-      source: "/r-powerpoint",
+      source: "/rppt",
       destination: "https://onedrive.live.com/view.aspx?resid=CBAB2E757555316E!6022&ithint=file%2cpptx&authkey=!AJbMN6_6IAHzksQ", 
     },
       
     {
-      source: "/d-powerpoint",
+      source: "/dppt",
       destination: "https://onedrive.live.com/redir?resid=CBAB2E757555316E%216022&authkey=%21ACKAHsbh5hxgmsA&page=Download",
     },
     
