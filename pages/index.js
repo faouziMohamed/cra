@@ -1,16 +1,16 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import { PageContentData, useThemes } from "../components/articleLayout";
+import { /* PageContentData ,*/ useThemes } from "../components/articleLayout";
 // import BottomNavigation from "../components/bottomNavigation";
 import Carousel from "../components/Carousel";
 import Footer from "../components/footer";
 import HeadData from "../components/HeadData";
 import Header from "../components/header";
-import { PageContent } from "../components/mainLayout";
+// import { PageContent } from "../components/mainLayout";
 import Noscript from "../components/Noscript";
 import TimeLine from "../components/timeline/timeline";
-import { getAllFomationsMetadata, getHomePageData } from "../lib/posts";
+import { getAllArticlesMetadata, getHomePageData } from "../lib/posts";
 import style from "./index.module.css";
 
 export function getStaticProps() {
@@ -19,10 +19,10 @@ export function getStaticProps() {
     props: {
       metadata: pageMetadata,
       data: pageContent,
-      formationsMetadata: getAllFomationsMetadata(),
+      formationsMetadata: getAllArticlesMetadata(),
       navigation: {
         prev: "/#",
-        next: "/formations",
+        next: "/articles",
       },
     },
   };
@@ -109,7 +109,7 @@ function HomePageRow3({ data }) {
     </div>
   );
 }
-function HomePageRow4({ data }) {
+function HomePageRow4(/* { data } */) {
   return (
     <>
       {/* <PageContent>

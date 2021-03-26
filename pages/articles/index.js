@@ -4,15 +4,15 @@ import { useEffect } from "react";
 
 import Date from "../../components/date";
 import Layout, { IncludeIf } from "../../components/mainLayout";
-import css from "../../components/styles/formations.module.css";
-import { getAllFomationsMetadata, getPageMetadata } from "../../lib/posts";
+import css from "../../components/styles/articles.module.css";
+import { getAllArticlesMetadata, getPageMetadata } from "../../lib/posts";
 import enableThemes from "../../lib/themes";
 
 export function getStaticProps() {
   return {
     props: {
-      metadata: getAllFomationsMetadata(),
-      pageMetadata: getPageMetadata("data/formations", "formations.yaml"),
+      metadata: getAllArticlesMetadata(),
+      pageMetadata: getPageMetadata("articles", "articles.yaml"),
     },
   };
 }
@@ -33,7 +33,7 @@ export default function OverView({ metadata, pageMetadata }) {
           video: `/video/f/${meta.id.slice(-1)}`,
         },
       },
-      articlePath: `/formations/${meta.id.join("/")}`,
+      articlePath: `${meta.id.join("/")}`,
       logo: meta.data.logo,
       logoAltTxt: meta.data.logoAltTxt,
       title: meta.data.title,

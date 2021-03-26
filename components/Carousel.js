@@ -7,11 +7,12 @@ export default function Carousel() {
     { image: "/images/home_slides/cra-banner-2.jpg" },
     { image: "/images/home_slides/formations-1.jpg" },
     { image: "/images/home_slides/formations-2.png" },
-    { image: "/images/home_slides/formations-3.jpg" },
+    { image: "/images/home_slides/formations-3.png" },
     { image: "/images/home_slides/formations-4.jpg" },
     { image: "/images/home_slides/wos-banner.jpg" },
     { image: "/images/home_slides/wos-1.jpg" },
     { image: "/images/home_slides/wos-2.jpg" },
+    { image: "/images/home_slides/wos-3.jpg" },
   ];
   useSwipper();
   return (
