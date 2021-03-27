@@ -72,5 +72,9 @@ function useSwipper() {
       simulateTouch: true,
       spaceBetween: 20,
     });
+
+    return () => {
+      document.querySelector(".swiper-container").remove();
+    };
   }, []);
 }

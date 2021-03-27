@@ -23,6 +23,7 @@ export default function OverView({ metadata, pageMetadata }) {
   }, []);
 
   const cardData = metadata.map((meta) => {
+    console.log(meta);
     return {
       key: meta.id.join("/"),
       links: {
@@ -34,7 +35,10 @@ export default function OverView({ metadata, pageMetadata }) {
         },
       },
       articlePath: `${meta.id.join("/")}`,
-      logo: meta.data.logo,
+      logo:
+        meta.data.articleType === "Webinaire"
+          ? `/images/cra-icon-white.png`
+          : `/images/cra-icon-white.png`,
       logoAltTxt: meta.data.logoAltTxt,
       title: meta.data.title,
       titleHead: meta.data.pageTitle,
@@ -80,27 +84,37 @@ function DocCard({ data }) {
           </h1>
 
           <div className={`${css.download_link_container} flex`}>
-            <figure className={`${css.cardFigure} flex`}>
-              <img
-                className={`${css.logo_img}`}
-                src={data.logo}
-                alt={data.logoAltTxt}
-                width="130"
-              />
-              <figcaption className={`${css.cardDescription} flex`}>
+            <div className={`${css.cardFigure} flex`}>
+              <Link href={data.articlePath}>
+                <a className={`${css.download_link}`}>
+                  <img
+                    className={
+                      data.doctypes
+                        ? `${css.logo_img}`
+                        : `${css.logo_img_bigger}`
+                    }
+                    src={data.logo}
+                    alt={data.logoAltTxt}
+                    width="130"
+                  />
+                </a>
+              </Link>
+              <section className={`${css.cardDescription} flex`}>
                 <h2 className={`${css.titleMargin} ${css.formation_title}`}>
                   <Link href={data.articlePath}>
                     <a className={`${css.link_to_article}`}>{data.title}</a>
                   </Link>
                 </h2>
 
-                <h3 className={`${css.Author}`}>{data.authors}</h3>
+                <h3 className={`${css.author}`}>
+                  <address>{data.authors}</address>
+                </h3>
                 <small className={`${css.smallInfoStyle}`}>
                   {data.date
                     ? (() => (
                         <>
                           {"Le "}
-                          <Date dateString={data.date} />{" "}
+                          <Date dateString={data.date} />
                         </>
                       ))()
                     : "Date non définie "}
@@ -108,11 +122,11 @@ function DocCard({ data }) {
                     ? `sur ${data.where}`
                     : "Lieu non définie"}
                 </small>
-              </figcaption>
+              </section>
               <IncludeIf condition={data.doctypes}>
                 <LinkToFilesSection data={data} docTypeValue={docTypeValue} />
               </IncludeIf>
-            </figure>
+            </div>
           </div>
         </section>
       </article>

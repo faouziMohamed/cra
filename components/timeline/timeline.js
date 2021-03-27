@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import style from "./timeline.module.css";
 
 export default function TimeLine({ content }) {

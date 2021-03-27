@@ -5,7 +5,7 @@ pageSubtitle: "CRA, ACEM Kénitra"
 authors: "Dr Idriss Ali Ahmadi Ben Saïd, Mme Ibrahim Habibat, 
 Mr Walid Ben Ahmed, Mr Moussa Omar Saayane, Mr Alhamidi Imam, Mr Idriss Mohamed Abdou"
 articleType: "Webinaire"
-keywords: "PowerPoint, Microsoft Office, student, etudiant"
+keywords: "doctorat, doctorant, these, reussir-sa-these, reussir, etudiant"
 description: "Réussir Sa Thèse: Le choix du Laboratoire; 
 La recherche, un choix fondé et non une roue de secours; Qu'est ce qu'une thèse de Doctorat; 
 Méthodologie de travail dans le cadre d'une thèse de Doctorat en Économie; Quelques outils 
@@ -21,6 +21,6 @@ logo: "/images/formations/powerpoint.png"
 logoAltTxt: "Powerpoint Icon"
 formationDate: "2021-01-17"
 where: "Facebook Live"
-doctypes: "pdf;ppt"
+doctypes: ""
 ---
 

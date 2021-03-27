@@ -7,7 +7,7 @@ export default function Header() {
     <>
       <header className="app-header">
         <nav className="app-header-nav flex">
-          <Link href="/">
+          <Link href="/home">
             <a className="app-header-left-items flex">
               <HeaderLogo />
             </a>
@@ -43,16 +43,16 @@ function HeaderLeftItems() {
         <span className="slider round flex"></span>
       </label>
       <div className="app-header-social-container">
-        <i className="fab fa-github-square app-header-social up app-header-github-icon"></i>
-        <i className="fab fa-facebook-square app-header-social up app-header-facebook-icon"></i>
-        <i className="fab fa-whatsapp-square app-header-social up app-header-whatsapp-icon"></i>
-      </div>
-      {/* <i className="fad fa-arrow-alt-from-bottom arrow"></i> */}
-      {/* <Link href={craSocialLinks.githubRepo()}>
-        <a className="app-header-github-btn" id="app-github-link">
-          <i className="app-header-github-icon fab fa-github"></i>
+        <a href="https://github.com/cra-k">
+          <i className="fab fa-github-square app-header-social up app-header-github-icon"></i>
         </a>
-      </Link> */}
+        <a href="https://www.facebook.com/Club-de-Recherches-Acad%C3%A9miques-310130176356323/">
+          <i className="fab fa-facebook-square app-header-social up app-header-facebook-icon"></i>
+        </a>
+        <i className="fas fa-phone-square-alt app-header-social up app-header-phone-call-icon">
+          <address className="phone-number-in-header">0652-032558</address>
+        </i>
+      </div>
     </div>
   );
 }
