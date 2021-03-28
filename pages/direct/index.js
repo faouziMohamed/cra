@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 
 import Layout from "../../components/mainLayout";
-import css from "../../components/styles/formations.module.css";
+import css from "../../components/styles/articles.module.css";
 import enableThemes from "../../lib/themes";
 
 const metadata = {

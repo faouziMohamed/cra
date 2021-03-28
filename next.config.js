@@ -15,6 +15,16 @@ module.exports = withPlugins([
           destination: "/home",
           permanent: true,
         },
+        {
+          source: "/formations",
+          destination: "/articles",
+          permanent: true,
+        },
+        {
+          source: "/direct",
+          destination: "/home",
+          permanent: false,
+        },
       ];
     },
     async rewrites() {

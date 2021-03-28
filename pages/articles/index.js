@@ -4,15 +4,15 @@ import { useEffect } from "react";
 
 import Date from "../../components/date";
 import Layout, { IncludeIf } from "../../components/mainLayout";
-import css from "../../components/styles/formations.module.css";
-import { getAllFomationsMetadata, getPageMetadata } from "../../lib/posts";
+import css from "../../components/styles/articles.module.css";
+import { getAllArticlesMetadata, getPageMetadata } from "../../lib/posts";
 import enableThemes from "../../lib/themes";
 
 export function getStaticProps() {
   return {
     props: {
-      metadata: getAllFomationsMetadata(),
-      pageMetadata: getPageMetadata("data/formations", "formations.yaml"),
+      metadata: getAllArticlesMetadata(),
+      pageMetadata: getPageMetadata("articles", "articles.yaml"),
     },
   };
 }
@@ -33,15 +33,18 @@ export default function OverView({ metadata, pageMetadata }) {
           video: `/video/f/${meta.id.slice(-1)}`,
         },
       },
-      articlePath: `/formations/${meta.id.join("/")}`,
-      logo: meta.data.logo,
+      articlePath: `${meta.id.join("/")}`,
+      logo:
+        meta.data.articleType === "Webinaire"
+          ? `/images/cra-icon-white.png`
+          : `/images/cra-icon-white.png`,
       logoAltTxt: meta.data.logoAltTxt,
       title: meta.data.title,
       titleHead: meta.data.pageTitle,
       authors: meta.data.authors,
-      date: meta.data.formationDate || undefined,
-      where: meta.data.where || undefined,
-      doctypes: meta.data.doctypes.split(";"),
+      date: meta.data.formationDate || false,
+      where: meta.data.where || false,
+      doctypes: (meta.data.doctypes && meta.data.doctypes.split(";")) || false,
     };
   });
 
@@ -80,27 +83,37 @@ function DocCard({ data }) {
           </h1>
 
           <div className={`${css.download_link_container} flex`}>
-            <figure className={`${css.cardFigure} flex`}>
-              <img
-                className={`${css.logo_img}`}
-                src={data.logo}
-                alt={data.logoAltTxt}
-                width="130"
-              />
-              <figcaption className={`${css.cardDescription} flex`}>
+            <div className={`${css.cardFigure} flex`}>
+              <Link href={data.articlePath}>
+                <a className={`${css.download_link}`}>
+                  <img
+                    className={
+                      data.doctypes
+                        ? `${css.logo_img}`
+                        : `${css.logo_img_bigger}`
+                    }
+                    src={data.logo}
+                    alt={data.logoAltTxt}
+                    width="130"
+                  />
+                </a>
+              </Link>
+              <section className={`${css.cardDescription} flex`}>
                 <h2 className={`${css.titleMargin} ${css.formation_title}`}>
                   <Link href={data.articlePath}>
                     <a className={`${css.link_to_article}`}>{data.title}</a>
                   </Link>
                 </h2>
 
-                <h3 className={`${css.Author}`}>{data.authors}</h3>
+                <h3 className={`${css.author}`}>
+                  <address>{data.authors}</address>
+                </h3>
                 <small className={`${css.smallInfoStyle}`}>
                   {data.date
                     ? (() => (
                         <>
                           {"Le "}
-                          <Date dateString={data.date} />{" "}
+                          <Date dateString={data.date} />
                         </>
                       ))()
                     : "Date non définie "}
@@ -108,38 +121,39 @@ function DocCard({ data }) {
                     ? `sur ${data.where}`
                     : "Lieu non définie"}
                 </small>
-              </figcaption>
-
-              <div className={`${css.links_label_container}  flex`}>
-                <div className={`${css.links_label_1st_innerWrapper} flex`}>
-                  <div className={`${css.links_label_2nd_innerWrapper} flex`}>
-                    <label className={`${css.read_dw_label}`}>
-                      {"Lire/Télécharger"}
-                    </label>
-                    <div className={`${css.link_container} flex`}>
-                      {data.doctypes.map((doctype) => (
-                        <IncludeIf
-                          condition={doctype in docTypeValue}
-                          key={doctype}>
-                          <Link href={data.links.read[doctype]}>
-                            <a className={`${css.btn_links} flex`}>
-                              <i
-                                className={`${docTypeValue[doctype].icon}`}></i>
-                              <span className={`${css.btn_text}`}>
-                                {docTypeValue[doctype].text}
-                              </span>
-                            </a>
-                          </Link>
-                        </IncludeIf>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </figure>
+              </section>
+              <IncludeIf condition={data.doctypes}>
+                <LinkToFilesSection data={data} docTypeValue={docTypeValue} />
+              </IncludeIf>
+            </div>
           </div>
         </section>
       </article>
     </>
+  );
+}
+function LinkToFilesSection({ data, docTypeValue }) {
+  return (
+    <div className={`${css.links_label_container}  flex`}>
+      <div className={`${css.links_label_1st_innerWrapper} flex`}>
+        <div className={`${css.links_label_2nd_innerWrapper} flex`}>
+          <p className={`${css.read_dw_label}`}>Lire/Télécharger</p>
+          <div className={`${css.link_container} flex`}>
+            {data.doctypes.map((doctype) => (
+              <IncludeIf condition={doctype in docTypeValue} key={doctype}>
+                <Link href={data.links.read[doctype]}>
+                  <a className={`${css.btn_links} flex`}>
+                    <i className={`${docTypeValue[doctype].icon}`}></i>
+                    <span className={`${css.btn_text}`}>
+                      {docTypeValue[doctype].text}
+                    </span>
+                  </a>
+                </Link>
+              </IncludeIf>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

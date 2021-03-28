@@ -6,23 +6,26 @@ const externals = {
     },
     {
       source: "/doc-ppt/f/powerpoint",
-      destination: "https://onedrive.live.com/view.aspx?resid=CBAB2E757555316E!6022&ithint=file%2cpptx&authkey=!AJbMN6_6IAHzksQ",
+      destination:
+        "https://onedrive.live.com/view.aspx?resid=CBAB2E757555316E!6022&ithint=file%2cpptx&authkey=!AJbMN6_6IAHzksQ",
     },
     {
-      source: "/r-powerpoint",
-      destination: "https://onedrive.live.com/view.aspx?resid=CBAB2E757555316E!6022&ithint=file%2cpptx&authkey=!AJbMN6_6IAHzksQ", 
+      source: "/rppt",
+      destination:
+        "https://onedrive.live.com/view.aspx?resid=CBAB2E757555316E!6022&ithint=file%2cpptx&authkey=!AJbMN6_6IAHzksQ",
     },
-      
+
     {
-      source: "/d-powerpoint",
-      destination: "https://onedrive.live.com/redir?resid=CBAB2E757555316E%216022&authkey=%21ACKAHsbh5hxgmsA&page=Download",
+      source: "/dppt",
+      destination:
+        "https://onedrive.live.com/redir?resid=CBAB2E757555316E%216022&authkey=%21ACKAHsbh5hxgmsA&page=Download",
     },
-    
+
     {
       source: "/doc-pdf/f/powerpoint",
       destination: "https://1drv.ms/b/s!Am4xVXV1LqvLrwiBBNdY0NVnbjbw",
     },
-    
+
     {
       source: "/ppt-pdf",
       destination: "https://1drv.ms/b/s!Am4xVXV1LqvLrwiBBNdY0NVnbjbw",

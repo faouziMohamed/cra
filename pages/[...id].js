@@ -1,23 +1,17 @@
-import ArticleLayout from "../../components/articleLayout";
-import getPageData, { getAllPageIds } from "../../lib/posts";
-
-const dataTopParent = "formations";
-const PREFIX = `data/${dataTopParent}`;
+import ArticleLayout from "../components/articleLayout";
+import { getAllArticlesIds, getPageData } from "../lib/posts";
 
 export function getStaticPaths() {
-  const pattern = `/${PREFIX}/**/index.yaml`;
-  const paths = getAllPageIds(pattern, dataTopParent);
+  const { ids } = getAllArticlesIds();
   return {
-    paths: paths,
+    paths: ids,
     fallback: false,
   };
 }
 
 export function getStaticProps({ params }) {
   const pathToContent = params.id.join("/");
-  const { pageMetadata, pageContent } = getPageData(
-    `${PREFIX}/${pathToContent}`,
-  );
+  const { pageMetadata, pageContent } = getPageData(pathToContent);
 
   return {
     props: {

@@ -1,0 +1,219 @@
+.theme-dark {
+  /*every color in the header {*/
+  --app-header-nav-bg: rgb(1, 13, 27);
+
+  --app-header-nav-bd-bottom: rgba(128, 101, 14, 0.836);
+  --app-header-title-bg: #ff880010;
+  --app-header-title-border: #0011fe1e;
+  --app-header-title-cra-txt-color: #0cffa2;
+  --app-header-title-acem-txt-color: rgb(139, 226, 105);
+  --app-header-title-kenitra-txt-color: #20fffb;
+  --app-header-arrow-btn-color: rgb(255, 255, 255);
+  --app-header-bg-image: linear-gradient(
+      -7deg,
+      rgb(0, 10, 53) 20%,
+      rgba(11, 0, 92, 0.849) 50%,
+      rgb(4, 0, 59) 65% 75%
+    ),
+    linear-gradient(-7deg, rgb(0, 99, 104) 50% 60%);
+  --app-header-social-container-bg-image: linear-gradient(
+      to top,
+      rgba(1, 35, 97, 0.842) 10%,
+      rgba(1, 13, 46, 0.623) 40%
+    ),
+    linear-gradient(
+      to right,
+      rgba(1, 97, 49, 0.411),
+      rgba(1, 44, 46, 0.623) 40%
+    );
+  --app-header-social-text-color: rgb(217, 244, 255);
+  --app-header-social-text-color-hover: rgb(0, 225, 255);
+  --app-header-social-bg-hover: linear-gradient(
+    to right,
+    rgba(119, 247, 0, 0) 5%,
+    rgb(255, 255, 255) 75%
+  );
+
+  --github-icon-hover-color: rgb(1, 2, 5);
+  --facebook-icon-hover-color: rgb(1, 41, 92);
+  --phone-call-icon-hover-color: rgb(3, 100, 16);
+  --app-header-phone-num-bg: rgba(171, 236, 233, 0.925);
+  --app-header-phone-num-tootltip-bg: rgba(171, 236, 233, 0.925);
+  --app-header-phone-num-tootltip-color: #010e0f;
+  --app-header-copied-num-bg: green;
+  --app-header-copied-num-color: white;
+  /*}*/
+  --burger-wrapper-bg-color: rgb(0, 14, 22);
+  --burger-wrapper-bg-color-hover: rgb(2, 15, 19);
+  --burger-menu-bg-color: rgb(196, 111, 0);
+  --burger-menu-bg-color-hover: rgb(196, 177, 6);
+  --burger-menu-checked-bg: rgb(255, 0, 64);
+  /*Color in the body{*/
+  --home-page-row1-background-color: rgb(0, 109, 128);
+  --home-page-row1-text-color: white;
+  --main-article-bg: rgb(80, 95, 102);
+  --main-article-background-color: #133249;
+  --main-text-color: rgb(255, 255, 255);
+  --color-link: #faa;
+  --main-title-bg: rgb(1, 35, 46);
+  --main-title-color: rgb(236, 163, 3);
+  --main-subtitle-color: whitesmoke;
+  --main-section-bg: rgb(2, 28, 32);
+  --main-section-h2-color: #4cd8dd;
+  --main-section-h3-color: #79df93;
+  --main-section-h4-color: #d1e49e;
+  --main-section-h2-conclusion-color: rgb(0, 189, 142);
+  --main-section-link-not-visited: rgb(67, 189, 122);
+  --main-section-border-color: #033632;
+  --main-section-box-shadow-color: rgb(8, 51, 56);
+  --scrollbar-color-outter: rgb(0, 39, 46);
+  --scrollbar-color-inner: rgb(123, 238, 253);
+
+  --table-of-content-bg: rgb(2, 20, 26);
+  --table-of-content-color: #d4dada;
+  --table-of-content-box-shadow-color: rgba(1, 11, 26, 0.911);
+  --table-of-content-color-title-color: lightgreen;
+  --table-of-content-title-bd-bottom-color: rgba(75, 42, 165, 0.651);
+  --table-of-content-title-box-shadow-color: rgb(89, 131, 115);
+  --table-of-content-anchor-hover-color: rgb(221, 255, 100);
+  --toc-anchor-to-h2-hover-background-color: rgba(2, 2, 2, 0.658);
+  --toc-anchor-to-h3-hover-background-color: rgba(11, 27, 24, 0.658);
+  --toc-anchor-to-h4-hover-background-color: rgba(4, 23, 24, 0.658);
+
+  /* Color in navigation button (previous and next){ */
+  --app-nav-btn-text-color: #aefcffd2;
+  --app-nav-btn-background-color: rgba(59, 55, 51, 0.404);
+  --app-nav-btn-border-color: rgb(76, 83, 83);
+  --app-nav-btn-text-color-hv: #00eeffd2;
+  --app-nav-btn-background-color-hv: rgb(1, 11, 14);
+  --app-nav-btn-icon-color-hv: #5dffa0d2;
+  --app-nav-btn-boxshadow-color: rgb(0, 4, 21);
+  /*End Color in navigation button (previous and next)} */
+
+  /* All color in the footer { */
+  --app-footer-text-color: rgb(0, 0, 0);
+  --app-footer-link-default-text-color: rgb(253, 21, 60);
+  --app-footer-background-color: rgb(18, 65, 65);
+  --app-footer-top-item-background-color: rgb(135, 172, 169);
+  --app-footer-section-title-border-bottom-color: rgb(108, 119, 116);
+  --app-footer-section-title-color: rgb(29, 15, 15);
+  --app-cra-social-link-default-color: rgb(24, 95, 189);
+  --app-footer-cra-fb-link-color: rgb(25, 72, 201);
+  --app-footer-cra-github-link-color: rgb(47, 61, 80);
+  --app-footer-cra-github-link-hover-color: rgb(1, 8, 22);
+  --app-footer-cra-fb-link-hover-color: rgb(4, 64, 133);
+  /*End All color in the footer { */
+  --to-top-border-color: #0a9476;
+  --to-top-symbol-color: rgb(0, 247, 255);
+  /*}End colors in the body tag*/
+}
+/*Extends theme variable*/
+
+.theme-light {
+  /*Every color in the header {*/
+  --app-header-nav-bg: rgb(0, 44, 42);
+
+  --app-header-nav-bd-bottom: rgba(0, 255, 170, 0.836);
+  --app-header-title-bg: #ff880010;
+  --app-header-title-border: #0011fe1e;
+  --app-header-title-cra-txt-color: #48ffb9;
+  --app-header-title-acem-txt-color: rgb(246, 255, 116);
+  --app-header-title-kenitra-txt-color: #42ff52;
+  --app-header-arrow-btn-color: rgb(255, 255, 255);
+  --app-header-bg-image: linear-gradient(
+      -7deg,
+      rgb(0, 10, 53) 20%,
+      rgba(11, 0, 92, 0.849) 50%,
+      rgb(4, 0, 59) 65% 75%
+    ),
+    linear-gradient(-7deg, rgb(0, 99, 104) 50% 60%);
+  --app-header-social-container-bg-image: linear-gradient(
+      to top,
+      rgba(1, 35, 97, 0.842) 10%,
+      rgba(1, 13, 46, 0.623) 40%
+    ),
+    linear-gradient(
+      to right,
+      rgba(1, 97, 49, 0.411),
+      rgba(1, 44, 46, 0.623) 40%
+    );
+  --app-header-social-text-color: rgb(217, 244, 255);
+  --app-header-social-text-color-hover: rgb(0, 225, 255);
+  --app-header-social-bg-hover: linear-gradient(
+    to right,
+    rgba(119, 247, 0, 0) 5%,
+    rgb(255, 255, 255) 75%
+  );
+  --github-icon-hover-color: rgb(1, 2, 5);
+  --facebook-icon-hover-color: rgb(1, 41, 92);
+  --phone-call-icon-hover-color: rgb(3, 100, 16);
+  --app-header-phone-num-bg: rgba(171, 236, 233, 0.925);
+  --app-header-phone-num-tootltip-bg: var(--app-header-phone-num-bg);
+  --app-header-phone-num-tootltip-color: #010e0f;
+  --app-header-copied-num-bg: green;
+  --app-header-copied-num-color: white;
+  /*}*/
+  --burger-wrapper-bg-color: rgb(3, 21, 24);
+  --burger-wrapper-bg-color-hover: rgb(1, 13, 17);
+  --burger-menu-bg-color: rgb(145, 214, 32);
+  --burger-menu-bg-color-hover: rgb(255, 230, 0);
+  --burger-menu-checked-bg: rgb(255, 0, 64);
+  /*Color in the body{*/
+  --home-page-row1-background-color: rgb(0, 109, 128);
+  --home-page-row1-text-color: white;
+  --main-article-bg: rgba(255, 255, 255, 0.712);
+  --main-article-background-color: rgb(241, 255, 254);
+  --main-text-color: rgb(4, 27, 31);
+  --main-title-bg: rgb(32, 49, 80);
+  --main-title-color: rgb(220, 252, 160);
+  --main-subtitle-color: rgb(252, 255, 70);
+  --main-section-bg: rgb(255, 255, 255);
+  --main-section-h2-color: #050761;
+  --main-section-h3-color: #033636;
+  --main-section-h4-color: #005b6b;
+  --main-section-h2-conclusion-color: rgb(10, 95, 29);
+  --main-section-link-not-visited: rgb(7, 76, 97);
+  --main-section-border-color: #eeeded;
+  --main-section-box-shadow-color: rgb(255, 255, 255);
+  --color-link: rgb(230, 0, 0);
+  --scrollbar-color-outter: rgb(0, 39, 46);
+  --scrollbar-color-inner: rgb(123, 238, 253);
+
+  --table-of-content-bg: rgb(33, 44, 42);
+  --table-of-content-color: rgb(252, 252, 252);
+  --table-of-content-box-shadow-color: rgba(1, 11, 26, 0.911);
+  --table-of-content-color-title-color: rgb(130, 255, 238);
+  --table-of-content-title-bd-bottom-color: rgba(75, 42, 165, 0.651);
+  --table-of-content-title-box-shadow-color: rgb(89, 131, 115);
+  --table-of-content-anchor-hover-color: rgb(145, 240, 240);
+  /* --table-of-content- */
+  --toc-anchor-to-h2-hover-background-color: rgba(1, 16, 26, 0.658);
+  --toc-anchor-to-h3-hover-background-color: rgba(8, 17, 15, 0.658);
+  --toc-anchor-to-h4-hover-background-color: rgba(11, 8, 19, 0.623);
+  /* Color in navigation button (previous and next){ */
+  --app-nav-btn-text-color: #a2ffe8d2;
+  --app-nav-btn-background-color: rgb(5, 31, 32);
+  --app-nav-btn-text-color-hv: #00ffbfea;
+  --app-nav-btn-background-color-hv: rgb(2, 20, 20);
+  --app-nav-btn-icon-color-hv: #cff10fd2;
+  --app-nav-btn-border-color: rgb(6, 110, 110);
+  --app-nav-btn-boxshadow-color: rgb(0, 4, 21);
+  /*End Color in navigation button (previous and next)} */
+
+  /* All color in the footer { */
+  --app-footer-text-color: rgb(8, 26, 31);
+  --app-footer-link-default-text-color: rgb(161, 12, 37);
+  --app-footer-background-color: rgb(31, 46, 46);
+  --app-footer-top-item-background-color: rgb(148, 192, 168);
+  --app-footer-section-title-border-bottom-color: rgb(180, 218, 211);
+  --app-footer-section-title-color: rgb(12, 38, 44);
+  --app-cra-social-link-default-color: rgb(13, 63, 128);
+  --app-footer-cra-fb-link-color: rgb(19, 45, 116);
+  --app-footer-cra-github-link-color: rgb(2, 38, 49);
+  --app-footer-cra-github-link-hover-color: rgb(30, 80, 95);
+  --app-footer-cra-fb-link-hover-color: rgb(3, 4, 87);
+  /*End All color in the footer { */
+  --to-top-border-color: rgb(79, 143, 140);
+  --to-top-symbol-color: #b9ecc8;
+  /*}End colors in the body tag*/
+}
