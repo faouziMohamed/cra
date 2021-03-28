@@ -14,7 +14,6 @@ export default function Carousel() {
     { image: "/images/home_slides/wos-2.jpg" },
     { image: "/images/home_slides/wos-3.jpg" },
   ];
-  useSwipper();
   return (
     <div className={`caroussel`}>
       <div className="swiper-container">
@@ -29,6 +28,7 @@ export default function Carousel() {
 }
 
 function AddSlides({ slides }) {
+  useSwipper();
   return (
     <div className="swiper-wrapper">
       {slides.map((slide, index) => (
@@ -72,9 +72,5 @@ function useSwipper() {
       simulateTouch: true,
       spaceBetween: 20,
     });
-
-    return () => {
-      document.querySelector(".swiper-container").remove();
-    };
   }, []);
 }

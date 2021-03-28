@@ -522,3 +522,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 .dccache
+lib/themeContext.js

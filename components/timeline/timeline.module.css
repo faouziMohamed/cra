@@ -1,4 +1,10 @@
 /* The actual timeline (the vertical ruler) */
+.timeline,
+.timeline * {
+  margin: 0;
+  padding: 0;
+}
+
 .timeline {
   position: relative;
   padding: 25px 0 0 0;

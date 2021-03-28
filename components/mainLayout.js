@@ -2,7 +2,6 @@ import "swiper/swiper-bundle.css";
 
 import BottomNavigation from "./bottomNavigation";
 import LeftBurgerButton from "./burgerBtn";
-import Carousel from "./Carousel";
 import Footer from "./footer";
 import HeadData from "./HeadData";
 import Header from "./header";

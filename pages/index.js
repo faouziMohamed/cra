@@ -44,14 +44,12 @@ export default function LandPage({ metadata, data, formationsMetadata }) {
       <Header metadata={metadata} />
       <div className="root" id="app">
         <main className={`app-content main-content flex`}>
-          <div className={`${style.home_content_wrapper} `}>
+          <div className={`${style.home_content_wrapper}`}>
             <span id="top"></span>
             <HomePageRow1 metadata={metadata} />
             <HomePageRow2 />
             <HomePageRow3 data={formationsMetadata} />
             <HomePageRow4 data={data} />
-            {/* TODO: Add timeline for events here */}
-            {/* Events are Webinars or Formations */}
           </div>
         </main>
         <Noscript />
@@ -80,12 +78,12 @@ function HomePageRow1({ metadata }) {
             <div className={`${style.home_top_links_container}`}>
               <ul className={`${style.home_top_links_list}`}>
                 <li className={`${style.home_top_link_item}`}>
-                  <Link href="/formations">
+                  <Link href="/articles">
                     <a className={`${style.home_top_link}`}>Formations</a>
                   </Link>
                 </li>
                 <li className={`${style.home_top_link_item}`}>
-                  <Link href="/formations">
+                  <Link href="/articles">
                     <a className={`${style.home_top_link}`}>Webinaires</a>
                   </Link>
                 </li>
@@ -112,9 +110,6 @@ function HomePageRow3({ data }) {
 function HomePageRow4(/* { data } */) {
   return (
     <>
-      {/* <PageContent>
-            <PageContentData data={data} />
-          </PageContent> */}
       <Footer />
       <a className="to-top" alt="Monter en haut de la page" href="#top">
         {""}

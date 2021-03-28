@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-import { craSocialLinks } from "../lib/utils";
-
 export default function Header() {
   return (
     <>
@@ -36,21 +34,51 @@ function HeaderLogo() {
 }
 
 function HeaderLeftItems() {
+  let copieToClipboard = async () => {
+    if (!navigator.clipboard) {
+      return;
+    }
+    const text = document.querySelector("#phone-number").dataset.phoneNumber;
+    try {
+      await navigator.clipboard.writeText(text);
+      document.querySelector(".copied").classList.add("active");
+    } catch (err) {
+      () => {};
+    }
+  };
+
   return (
     <div className="app-header-right-items flex">
-      <label id="switch" className="switch flex">
+      <label
+        id="switch"
+        className="switch flex"
+        style={{ visibility: "visible" }}>
         <input type="checkbox" id="slider" className="hidden" />
         <span className="slider round flex"></span>
       </label>
       <div className="app-header-social-container">
-        <a href="https://github.com/cra-k">
-          <i className="fab fa-github-square app-header-social up app-header-github-icon"></i>
-        </a>
-        <a href="https://www.facebook.com/Club-de-Recherches-Acad%C3%A9miques-310130176356323/">
-          <i className="fab fa-facebook-square app-header-social up app-header-facebook-icon"></i>
-        </a>
-        <i className="fas fa-phone-square-alt app-header-social up app-header-phone-call-icon">
-          <address className="phone-number-in-header">0652-032558</address>
+        <Link href="https://github.com/cra-k">
+          <a className="app-header-social up app-header-github-icon">
+            <i className="fab fa-github-square"></i>
+          </a>
+        </Link>
+        <Link href="https://www.facebook.com/Club-de-Recherches-Acad%C3%A9miques-310130176356323/">
+          <a className="app-header-social up app-header-facebook-icon">
+            <i className="fab fa-facebook-square "></i>
+          </a>
+        </Link>
+        <i
+          className="fas fa-phone-square-alt app-header-social up app-header-phone-call-icon"
+          aria-hidden="true"
+          onClick={copieToClipboard}
+          title="Cliquez pour copier le numéro de téléphone">
+          <address
+            id="phone-number"
+            className="phone-number-in-header"
+            data-phone-number="+212652032558">
+            <i className=" copied fas fa-check-circle"> Copié</i>
+            (212) 652-032 558
+          </address>
         </i>
       </div>
     </div>

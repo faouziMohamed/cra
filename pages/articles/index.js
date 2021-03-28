@@ -23,7 +23,6 @@ export default function OverView({ metadata, pageMetadata }) {
   }, []);
 
   const cardData = metadata.map((meta) => {
-    console.log(meta);
     return {
       key: meta.id.join("/"),
       links: {
