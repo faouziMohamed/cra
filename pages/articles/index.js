@@ -35,9 +35,10 @@ export default function OverView({ metadata, pageMetadata }) {
       },
       articlePath: `${meta.id.join("/")}`,
       logo:
-        meta.data.articleType === "Webinaire"
+        meta.data.logo ||
+        (meta.data.articleType === "Webinaire"
           ? `/images/cra-icon-white.png`
-          : `/images/cra-icon-white.png`,
+          : `/images/cra-icon-green.png`),
       logoAltTxt: meta.data.logoAltTxt,
       title: meta.data.title,
       titleHead: meta.data.pageTitle,
