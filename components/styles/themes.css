@@ -51,10 +51,11 @@
   /*Color in the body{*/
   --home-page-row1-background-color: rgb(0, 109, 128);
   --home-page-row1-text-color: white;
-  --main-article-bg: rgb(7, 70, 62);
-  --main-text-color: rgb(166, 216, 208);
+  --main-article-bg: rgb(20, 175, 154);
+  --main-article-background-color: #004146;
+  --main-text-color: rgb(230, 255, 251);
   --color-link: #faa;
-  --main-title-bg: rgb(9, 46, 45);
+  --main-title-bg: rgb(1, 35, 46);
   --main-title-color: rgb(236, 163, 3);
   --main-subtitle-color: whitesmoke;
   --main-section-bg: rgb(2, 28, 32);
@@ -90,17 +91,17 @@
   /*End Color in navigation button (previous and next)} */
 
   /* All color in the footer { */
-  --app-footer-text-color: rgb(8, 26, 31);
-  --app-footer-link-default-text-color: rgb(161, 12, 37);
-  --app-footer-background-color: rgb(31, 46, 46);
-  --app-footer-top-item-background-color: rgb(65, 156, 141);
+  --app-footer-text-color: rgb(159, 244, 255);
+  --app-footer-link-default-text-color: rgb(253, 21, 60);
+  --app-footer-background-color: rgb(18, 65, 65);
+  --app-footer-top-item-background-color: rgb(6, 31, 29);
   --app-footer-section-title-border-bottom-color: rgb(83, 204, 174);
-  --app-footer-section-title-color: rgb(2, 31, 37);
-  --app-cra-social-link-default-color: rgb(13, 63, 128);
-  --app-footer-cra-fb-link-color: rgb(19, 45, 116);
-  --app-footer-cra-github-link-color: rgb(2, 38, 49);
-  --app-footer-cra-github-link-hover-color: rgb(30, 80, 95);
-  --app-footer-cra-fb-link-hover-color: rgb(3, 4, 87);
+  --app-footer-section-title-color: rgb(34, 212, 248);
+  --app-cra-social-link-default-color: rgb(24, 95, 189);
+  --app-footer-cra-fb-link-color: rgb(25, 72, 201);
+  --app-footer-cra-github-link-color: rgb(174, 236, 253);
+  --app-footer-cra-github-link-hover-color: rgb(255, 255, 255);
+  --app-footer-cra-fb-link-hover-color: rgb(65, 149, 245);
   /*End All color in the footer { */
   --to-top-border-color: #0a9476;
   --to-top-symbol-color: rgb(0, 247, 255);
@@ -160,7 +161,8 @@
   /*Color in the body{*/
   --home-page-row1-background-color: rgb(0, 109, 128);
   --home-page-row1-text-color: white;
-  --main-article-bg: rgba(255, 255, 255, 0.226);
+  --main-article-bg: rgba(230, 255, 255, 0.712);
+  --main-article-background-color: rgb(223, 255, 236);
   --main-text-color: rgb(4, 27, 31);
   --main-title-bg: rgb(32, 49, 80);
   --main-title-color: rgb(220, 252, 160);

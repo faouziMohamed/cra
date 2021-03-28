@@ -407,8 +407,8 @@ body {
   position: relative;
   scroll-behavior: smooth;
   color: var(--main-text-color);
-  background-color: rgb(223, 255, 236);
-  border: 1px solid gray;
+  background-color: var(--main-article-background-color);
+  border: 1px solid rgba(149, 150, 153, 0.24);
   padding: 12px;
 }
 
