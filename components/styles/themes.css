@@ -51,15 +51,15 @@
   /*Color in the body{*/
   --home-page-row1-background-color: rgb(0, 109, 128);
   --home-page-row1-text-color: white;
-  --main-article-bg: rgb(20, 175, 154);
-  --main-article-background-color: #004146;
-  --main-text-color: rgb(230, 255, 251);
+  --main-article-bg: rgb(80, 95, 102);
+  --main-article-background-color: #133249;
+  --main-text-color: rgb(255, 255, 255);
   --color-link: #faa;
   --main-title-bg: rgb(1, 35, 46);
   --main-title-color: rgb(236, 163, 3);
   --main-subtitle-color: whitesmoke;
   --main-section-bg: rgb(2, 28, 32);
-  --main-section-h2-color: #18d6bd;
+  --main-section-h2-color: #4cd8dd;
   --main-section-h3-color: #79df93;
   --main-section-h4-color: #d1e49e;
   --main-section-h2-conclusion-color: rgb(0, 189, 142);
@@ -82,8 +82,8 @@
 
   /* Color in navigation button (previous and next){ */
   --app-nav-btn-text-color: #aefcffd2;
-  --app-nav-btn-background-color: rgb(6, 20, 24);
-  --app-nav-btn-border-color: rgb(6, 110, 110);
+  --app-nav-btn-background-color: rgba(59, 55, 51, 0.404);
+  --app-nav-btn-border-color: rgb(76, 83, 83);
   --app-nav-btn-text-color-hv: #00eeffd2;
   --app-nav-btn-background-color-hv: rgb(1, 11, 14);
   --app-nav-btn-icon-color-hv: #5dffa0d2;
@@ -91,17 +91,17 @@
   /*End Color in navigation button (previous and next)} */
 
   /* All color in the footer { */
-  --app-footer-text-color: rgb(159, 244, 255);
+  --app-footer-text-color: rgb(0, 0, 0);
   --app-footer-link-default-text-color: rgb(253, 21, 60);
   --app-footer-background-color: rgb(18, 65, 65);
-  --app-footer-top-item-background-color: rgb(6, 31, 29);
-  --app-footer-section-title-border-bottom-color: rgb(83, 204, 174);
-  --app-footer-section-title-color: rgb(34, 212, 248);
+  --app-footer-top-item-background-color: rgb(135, 172, 169);
+  --app-footer-section-title-border-bottom-color: rgb(108, 119, 116);
+  --app-footer-section-title-color: rgb(29, 15, 15);
   --app-cra-social-link-default-color: rgb(24, 95, 189);
   --app-footer-cra-fb-link-color: rgb(25, 72, 201);
-  --app-footer-cra-github-link-color: rgb(174, 236, 253);
-  --app-footer-cra-github-link-hover-color: rgb(255, 255, 255);
-  --app-footer-cra-fb-link-hover-color: rgb(65, 149, 245);
+  --app-footer-cra-github-link-color: rgb(47, 61, 80);
+  --app-footer-cra-github-link-hover-color: rgb(1, 8, 22);
+  --app-footer-cra-fb-link-hover-color: rgb(4, 64, 133);
   /*End All color in the footer { */
   --to-top-border-color: #0a9476;
   --to-top-symbol-color: rgb(0, 247, 255);
@@ -161,8 +161,8 @@
   /*Color in the body{*/
   --home-page-row1-background-color: rgb(0, 109, 128);
   --home-page-row1-text-color: white;
-  --main-article-bg: rgba(230, 255, 255, 0.712);
-  --main-article-background-color: rgb(223, 255, 236);
+  --main-article-bg: rgba(255, 255, 255, 0.712);
+  --main-article-background-color: rgb(241, 255, 254);
   --main-text-color: rgb(4, 27, 31);
   --main-title-bg: rgb(32, 49, 80);
   --main-title-color: rgb(220, 252, 160);
