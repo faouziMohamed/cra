@@ -14,18 +14,14 @@ const externals = {
       destination:
         "https://onedrive.live.com/view.aspx?resid=CBAB2E757555316E!6022&ithint=file%2cpptx&authkey=!AJbMN6_6IAHzksQ",
     },
-
     {
       source: "/dppt",
-      destination:
-        "https://onedrive.live.com/redir?resid=CBAB2E757555316E%216022&authkey=%21ACKAHsbh5hxgmsA&page=Download",
+      destination: "https://1drv.ms/u/s!Am4xVXV1LqvLsUh993TzV3Rd3RkX?e=4kCnO6",
     },
-
     {
       source: "/doc-pdf/f/powerpoint",
       destination: "https://1drv.ms/b/s!Am4xVXV1LqvLrwiBBNdY0NVnbjbw",
     },
-
     {
       source: "/ppt-pdf",
       destination: "https://1drv.ms/b/s!Am4xVXV1LqvLrwiBBNdY0NVnbjbw",
@@ -47,10 +43,6 @@ const internals = {
     {
       source: "/home",
       destination: "/",
-    },
-    {
-      source: "/formation",
-      destination: "/formations",
     },
   ],
 };
