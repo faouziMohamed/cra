@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useEffect } from "react";
 
-import Date from "../../components/date";
+import DateComponent from "../../components/date";
 import Layout, { IncludeIf } from "../../components/mainLayout";
 import css from "../../components/styles/articles.module.css";
 import { getAllArticlesMetadata, getPageMetadata } from "../../lib/posts";
@@ -44,6 +44,7 @@ export default function OverView({ metadata, pageMetadata }) {
       titleHead: meta.data.pageTitle,
       authors: meta.data.authors,
       date: meta.data.formationDate || false,
+      time: meta.data.time || "14h30",
       where: meta.data.where || false,
       doctypes: (meta.data.doctypes && meta.data.doctypes.split(";")) || false,
     };
@@ -110,14 +111,17 @@ function DocCard({ data }) {
                   <address>{data.authors}</address>
                 </h3>
                 <small className={`${css.smallInfoStyle}`}>
-                  {data.date
-                    ? (() => (
-                        <>
-                          {"Le "}
-                          <Date dateString={data.date} />
-                        </>
-                      ))()
-                    : "Date non définie "}
+                  {data.date ? (
+                    <>
+                      {"Le "}
+                      <DateComponent
+                        dateString={data.date}
+                        timeString={data.time}
+                      />{" "}
+                    </>
+                  ) : (
+                    "Date non définie "
+                  )}
                   {data.date && data.where
                     ? `sur ${data.where}`
                     : "Lieu non définie"}
