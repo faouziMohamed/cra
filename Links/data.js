@@ -5,6 +5,10 @@ const externals = {
       destination: "https://1drv.ms/p/s!Am4xVXV1LqvLrnACo-IRGQDOHx_7?e=4AVfID",
     },
     {
+      source: "/acem-news",
+      destination: "https://acemnews.000webhostapp.com/",
+    },
+    {
       source: "/doc-ppt/f/powerpoint",
       destination:
         "https://onedrive.live.com/view.aspx?resid=CBAB2E757555316E!6022&ithint=file%2cpptx&authkey=!AJbMN6_6IAHzksQ",
