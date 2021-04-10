@@ -25,6 +25,11 @@ module.exports = withPlugins([
           destination: "/home",
           permanent: false,
         },
+        {
+          source: "/acem-news",
+          destination: "https://acemnews.000webhostapp.com/",
+          permanent: true,
+        },
       ];
     },
     async rewrites() {
