@@ -19,6 +19,10 @@ const externals = {
       destination: "https://1drv.ms/u/s!Am4xVXV1LqvLsUh993TzV3Rd3RkX?e=4kCnO6",
     },
     {
+      source: "/ppt-pratique",
+      destination: "https://onedrive.live.com/view.aspx?cid=cbab2e757555316e&page=view&resid=CBAB2E757555316E!6026&parId=CBAB2E757555316E!6393&authkey=!AH33dPNXdF3dGRc&app=PowerPoint",
+    },
+    {
       source: "/doc-pdf/f/powerpoint",
       destination: "https://1drv.ms/b/s!Am4xVXV1LqvLrwiBBNdY0NVnbjbw",
     },
