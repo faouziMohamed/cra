@@ -39,6 +39,10 @@ const externals = {
       destination:
         "https://drive.google.com/file/d/1txZ-4mPxUJfdMz4HMRvOmksDCkpCmOIW/view",
     },
+    {
+      source: "/courses/dpl-1",
+      destonation: "https://colab.research.google.com/gist/faouziMohamed/602d473d2d4673b69a9031bbb68ec96e/creation_d_un_modele_de_deep_learning_avec_tf-keras_.ipynb",
+    }
   ],
 };
 
