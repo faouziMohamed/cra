@@ -20,7 +20,8 @@ const externals = {
     },
     {
       source: "/ppt-pratique",
-      destination: "https://onedrive.live.com/view.aspx?cid=cbab2e757555316e&page=view&resid=CBAB2E757555316E!6026&parId=CBAB2E757555316E!6393&authkey=!AH33dPNXdF3dGRc&app=PowerPoint",
+      destination:
+        "https://onedrive.live.com/view.aspx?cid=cbab2e757555316e&page=view&resid=CBAB2E757555316E!6026&parId=CBAB2E757555316E!6393&authkey=!AH33dPNXdF3dGRc&app=PowerPoint",
     },
     {
       source: "/doc-pdf/f/powerpoint",
@@ -39,10 +40,6 @@ const externals = {
       destination:
         "https://drive.google.com/file/d/1txZ-4mPxUJfdMz4HMRvOmksDCkpCmOIW/view",
     },
-    {
-      source: "/courses/dpl-1",
-      destination: "https://colab.research.google.com/gist/faouziMohamed/602d473d2d4673b69a9031bbb68ec96e/creation_d_un_modele_de_deep_learning_avec_tf-keras_.ipynb",
-    }
   ],
 };
 
