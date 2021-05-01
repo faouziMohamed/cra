@@ -42,7 +42,7 @@ const externals = {
     },
     {
       source: "/dpl-project/dataset",
-      destination: "https://storage.googleapis.com/kaggle-data-sets/592212/1067156/bundle/archive.zip?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=gcp-kaggle-com%40kaggle-161607.iam.gserviceaccount.com%2F20210428%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20210428T153325Z&X-Goog-Expires=259199&X-Goog-SignedHeaders=host&X-Goog-Signature=763e68adcfb61ddaf1e4f658504bd8f3fd4e3a1d281908b7516f2f85cdbbffcc19847b9dc54b3d5d4dedce060e94f04c1b91b2d426fcc957ede3731a0cbbbd2e6af99eb857a72afb7cc48bff3b190ba3e344ad53d06ba162ed756acf6383e7069d9b3ec3b51a889738033602939527e3e0cde8440e581891b7d070ff6df0b0844e4dd935ddf712ab509058f7ccbc762e10502273e5b6893b2666f430b7d9bfb7e017c6ad93cf79f9588b2800b2f26b2464c19998e65beb532cb15d900bc2e44196bd8d8cd8e545a48c95e3d53582738b7180ef699a096c6cfb501ac4e6515d7692f2b42f5134c978c04eee5042ef0ac9b470338ab4e8d33bcc23117898c95d28",
+      destination: "https://raw.githubusercontent.com/faouziMohamed/language-translation/main/datasets/en-fr.csv",
     }
   ],
 };
