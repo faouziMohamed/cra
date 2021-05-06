@@ -44,9 +44,10 @@ module.exports = withPlugins([
         },
         {
           source: "/courses/dpl-3",
-          destination:"https://colab.research.google.com/gist/faouziMohamed/17180e4c1b16052a1236a691dd869a1b/natural-language-processing.ipynb",
-          permanent: false
-        }
+          destination:
+            "https://colab.research.google.com/gist/faouziMohamed/17180e4c1b16052a1236a691dd869a1b/natural-language-processing.ipynb",
+          permanent: false,
+        },
       ];
     },
     async rewrites() {

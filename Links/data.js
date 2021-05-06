@@ -42,8 +42,14 @@ const externals = {
     },
     {
       source: "/dpl-project/dataset",
-      destination: "https://raw.githubusercontent.com/faouziMohamed/language-translation/main/datasets/en-fr.csv",
-    }
+      destination:
+        "https://raw.githubusercontent.com/faouziMohamed/language-translation/main/datasets/en-fr.csv",
+    },
+    {
+      source: "/dpl-project/eng-ctr",
+      destination:
+        "https://raw.githubusercontent.com/faouziMohamed/language-translation/main/datasets/eng-contraction.JSON",
+    },
   ],
 };
 
