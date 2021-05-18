@@ -46,6 +46,11 @@ const externals = {
         "https://raw.githubusercontent.com/faouziMohamed/language-translation/main/datasets/en-fr.csv",
     },
     {
+      source: "/btc/dataset",
+      destination:
+        "https://raw.githubusercontent.com/faouziMohamed/language-translation/main/datasets/coin_Bitcoin.csv",
+    },
+    {
       source: "/dpl-project/eng-ctr",
       destination:
         "https://raw.githubusercontent.com/faouziMohamed/language-translation/main/datasets/eng-contraction.JSON",
