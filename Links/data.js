@@ -43,17 +43,17 @@ const externals = {
     {
       source: "/dpl-project/dataset",
       destination:
-        "https://raw.githubusercontent.com/faouziMohamed/language-translation/main/datasets/en-fr.csv",
+        "https://raw.githubusercontent.com/faouziMohamed/datasets/main/datasets/en-fr.csv",
     },
     {
       source: "/btc/dataset",
       destination:
-        "https://raw.githubusercontent.com/faouziMohamed/language-translation/main/datasets/coin_Bitcoin.csv",
+        "https://raw.githubusercontent.com/faouziMohamed/datasets/main/datasets/coin_Bitcoin.csv",
     },
     {
       source: "/dpl-project/eng-ctr",
       destination:
-        "https://raw.githubusercontent.com/faouziMohamed/language-translation/main/datasets/eng-contraction.JSON",
+        "https://raw.githubusercontent.com/faouziMohamed/datasets/main/datasets/eng-contraction.JSON",
     },
   ],
 };
