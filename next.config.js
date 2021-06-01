@@ -46,7 +46,13 @@ module.exports = withPlugins([
           source: "/courses/dpl-3",
           destination:
             "https://colab.research.google.com/gist/faouziMohamed/08f366d20a79d2334304cd2b6a885e7f/neural-machine-translation-nmt.ipynb",
-          permanent: false,
+          permanent: true,
+        },
+        {
+          source: "/glpc/project/dpl",
+          destination:
+            "https://colab.research.google.com/gist/faouziMohamed/08f366d20a79d2334304cd2b6a885e7f/neural-machine-translation-nmt.ipynb",
+          permanent: true,
         },
       ];
     },
