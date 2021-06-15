@@ -49,7 +49,7 @@ module.exports = withPlugins([
           permanent: true,
         },
         {
-          source: "/plpc/project/py-lstm",
+          source: "/glpc/project/py-lstm",
           destination: "https://colab.research.google.com/gist/faouziMohamed/83c3da379ca2ec2f332b8d6621a2ad69/projet_python_lstm.ipynb",
           permanent: true,
         },
