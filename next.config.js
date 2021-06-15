@@ -49,6 +49,11 @@ module.exports = withPlugins([
           permanent: true,
         },
         {
+          source: "/plpc/project/py-lstm",
+          destination: "https://colab.research.google.com/gist/faouziMohamed/83c3da379ca2ec2f332b8d6621a2ad69/projet_python_lstm.ipynb",
+          permanent: true,
+        },
+        {
           source: "/glpc/project/dpl",
           destination:
             "https://colab.research.google.com/gist/faouziMohamed/08f366d20a79d2334304cd2b6a885e7f/neural-machine-translation-nmt.ipynb",
